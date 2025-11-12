@@ -9,10 +9,10 @@ export default function Hero() {
         <img
           src={heroImage}
           alt="Triathlete in action"
-          className="h-full w-full object-cover object-[center_right]"
-          style={{ objectPosition: '75% center' }}
+          className="h-full w-full object-cover"
+          style={{ objectPosition: 'right center' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
       </div>
 
       <div className="relative h-full flex items-center">
