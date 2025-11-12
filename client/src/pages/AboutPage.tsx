@@ -57,9 +57,6 @@ export default function AboutPage() {
                 </Link>
               </div>
               <div className="grid grid-cols-1 gap-6">
-                <div className="aspect-square overflow-hidden rounded-lg">
-                  <img src={coachImage} alt="Gabriele Grimaldi" className="w-full h-full object-cover" />
-                </div>
                 <div className="aspect-video overflow-hidden rounded-lg">
                   <img src={coachingImage} alt="Gabriele in action" className="w-full h-full object-cover" />
                 </div>
