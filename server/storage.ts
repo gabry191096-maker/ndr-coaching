@@ -32,117 +32,66 @@ export class MemStorage implements IStorage {
         id: randomUUID(),
         title: "Best Running Routes in Battersea and Wandsworth",
         slug: "best-running-routes-battersea-wandsworth",
-        excerpt: "Discover the most scenic and effective running routes in Battersea, from Thames Path loops to Wandsworth Common circuits. Perfect for marathon training and easy runs.",
-        content: `<p>Living and training in Battersea gives you access to some of London's best running routes. Whether you're preparing for a marathon or enjoying an easy recovery run, here are my top picks for local routes.</p>
+        excerpt: "Discover the most scenic and effective running routes in Battersea, from Thames Path loops to Wandsworth Common circuits. Includes popular Strava routes used by local runners.",
+        content: `<p>Living and training in Battersea gives you access to some of London's best running routes. Whether you are preparing for a marathon or enjoying an easy recovery run, here are the most popular routes based on local Strava data and years of coaching athletes in this area.</p>
         
-        <h2>Thames Path Loop (5-10km)</h2>
-        <p>The Thames Path offers flat, scenic running with iconic views. Start at Battersea Park and head east toward Westminster, or west toward Putney. The flat terrain makes it perfect for tempo runs and long steady efforts.</p>
-        
-        <h2>Battersea Park Circuits</h2>
-        <p>The park's perimeter is approximately 2km, making it ideal for interval training. The interior paths offer varied terrain with some gentle hills - perfect for building strength while staying close to home.</p>
-        
-        <h2>Wandsworth Common Loop (4.5km)</h2>
-        <p>This quiet common provides a peaceful escape from busy streets. The soft paths are easier on your joints, making it excellent for recovery runs or building base mileage.</p>
-        
-        <h2>Training Tips</h2>
+        <h2>1. Battersea Park Loop (2.7km)</h2>
+        <p><strong>Distance:</strong> 2.7km (1.7 miles) - approximately 2km perimeter</p>
+        <p><strong>Terrain:</strong> Mostly flat, riverside paths and park trails</p>
+        <p><strong>Best for:</strong> Easy runs, warm-ups, interval training, recovery runs</p>
+        <p>The park's perimeter is ideal for interval training sessions. The interior paths offer varied terrain with some gentle hills - perfect for building strength while staying close to home. Features include Thames riverside views, ponds, gardens, and public facilities near the bandstand.</p>
+        <p><strong>Training tip:</strong> Use the 2km perimeter for 5x2km threshold intervals with 90 seconds recovery.</p>
+
+        <h2>2. Thames Path - Battersea to Westminster (6.5km loop)</h2>
+        <p><strong>Distance:</strong> Varies (6.5km recommended loop)</p>
+        <p><strong>Terrain:</strong> Completely flat, waterfront paths</p>
+        <p><strong>Best for:</strong> Tempo runs, long steady efforts, sightseeing runs</p>
+        <p>The Thames Path offers flat, scenic running with iconic views. Start at Battersea Park and head east toward Westminster, crossing back via Albert Bridge. The south bank is more runner-friendly with wider pedestrian paths and fewer diversions. Pass Battersea Power Station, the London Peace Pagoda, and Houses of Parliament.</p>
+        <p><strong>Popular Strava route:</strong> This is one of the most tracked routes in London. Early morning (6-7am) avoids the heaviest foot traffic.</p>
+
+        <h2>3. Wandsworth Common Loop (4.3km)</h2>
+        <p><strong>Distance:</strong> 4.3km (2.7 miles)</p>
+        <p><strong>Terrain:</strong> Flat, wide paths, mostly paved surfaces</p>
+        <p><strong>Best for:</strong> Recovery runs, easy-paced runs, beginner-friendly</p>
+        <p>This quiet common provides a peaceful escape from busy streets. The soft paths are easier on your joints, making it excellent for recovery runs or building base mileage. The relatively flat circular route around the common is perfect for consistent pacing.</p>
+        <p><strong>Find on Strava:</strong> Search "Wandsworth Common Loop" - highly popular with local runners.</p>
+
+        <h2>4. Battersea Park to Wandsworth Common (13.5km)</h2>
+        <p><strong>Distance:</strong> 13.5km (8.4 miles)</p>
+        <p><strong>Time:</strong> Approximately 1 hour 35 minutes at easy pace</p>
+        <p><strong>Best for:</strong> Long runs, half-marathon training</p>
+        <p>Connect multiple green spaces across Wandsworth Borough. This route cuts through Battersea Park, then Wandsworth Common, offering a mix of park paths and neighborhood trails. Perfect for building endurance while staying off busy roads.</p>
+        <p><strong>Training tip:</strong> Ideal for Sunday long runs during marathon build-up phases.</p>
+
+        <h2>5. Putney Bridge & Wandsworth Bridge Circular (5.8-10.6km)</h2>
+        <p><strong>Distance:</strong> 5.8-10.6km (depending on extension)</p>
+        <p><strong>Time:</strong> 40 minutes to 1 hour 15 minutes</p>
+        <p><strong>Best for:</strong> Thames-side loops, varied distance options</p>
+        <p>Run through Wandsworth Park, along the Thames, across bridges, and through Hurlingham Park. Year-round route with excellent facilities. Dog-friendly (on leads).</p>
+
+        <h2>Popular Strava Route: Clapham-Balham-Tooting-Wandsworth 10K</h2>
+        <p><strong>Distance:</strong> 10km (6 miles)</p>
+        <p><strong>Terrain:</strong> Flat surface, avoids high-traffic roads</p>
+        <p><strong>Best for:</strong> 10k race pace efforts, tempo runs</p>
+        <p>This loop is used by GB elite runners and local running clubs. Can start from multiple locations (Clapham, Balham, Tooting, or Wandsworth). Uses quieter roads like Cavendish Road instead of Balham High Road for safer running.</p>
+
+        <h2>Training Tips for These Routes</h2>
         <ul>
-          <li>Early morning runs (6-7am) avoid crowds and summer heat</li>
-          <li>Weekend long runs: Thames Path west toward Richmond offers 10-20km options</li>
-          <li>Hill repeats: Use the bridges (Albert, Chelsea) for strength work</li>
+          <li><strong>Early morning runs (6-7am)</strong> avoid crowds and summer heat, especially on Thames Path</li>
+          <li><strong>Weekend long runs:</strong> Thames Path west toward Richmond offers 10-20km options</li>
+          <li><strong>Hill repeats:</strong> Use the bridges (Albert Bridge, Chelsea Bridge, Wandsworth Bridge) for strength work</li>
+          <li><strong>Interval training:</strong> Battersea Park perimeter is perfect for 5x2km or 10x1km sessions</li>
+          <li><strong>Recovery runs:</strong> Wandsworth Common's soft paths are ideal for easy days</li>
         </ul>
-        
-        <p>Need a personalized training plan that incorporates these routes? <a href="/booking">Book a free consultation</a> to discuss your goals.</p>`,
+
+        <h2>Finding These Routes on Strava</h2>
+        <p>All of these routes are available on Strava. Use the Strava app's "Routes" feature or search by name. You can also check the Strava heatmap to see the most popular running paths in real-time based on millions of local activities.</p>
+        <p>Look for routes tagged with "Battersea," "Wandsworth," or "Thames Path" in the Strava route library.</p>
+
+        <p>Need a personalized training plan that incorporates these routes and prepares you for your goal race? <a href="/booking">Book a free consultation</a> to discuss your goals and get a science-based training program.</p>`,
         author: "Gabriele Grimaldi",
         category: "Running",
         publishedAt: new Date("2024-11-01"),
-        imageUrl: null,
-      },
-      {
-        id: randomUUID(),
-        title: "How to Train for Your First Triathlon While Working Full-Time",
-        slug: "first-triathlon-training-full-time-job",
-        excerpt: "Balancing triathlon training with a demanding career is challenging but achievable. Learn the key strategies for fitting swim, bike, and run sessions into a busy schedule.",
-        content: `<p>Training for your first triathlon while managing a full-time job requires smart planning and realistic expectations. Here's how to make it work.</p>
-        
-        <h2>Start with Sprint Distance</h2>
-        <p>For your first triathlon, target a sprint distance (750m swim, 20km bike, 5km run). This is challenging but achievable with 6-8 hours of weekly training - manageable alongside work commitments.</p>
-        
-        <h2>The 6-Day Training Week</h2>
-        <p>Structure your week with one rest day and shorter weekday sessions:</p>
-        <ul>
-          <li><strong>Monday:</strong> 30min easy swim (before or after work)</li>
-          <li><strong>Tuesday:</strong> 45min bike trainer or outdoor ride</li>
-          <li><strong>Wednesday:</strong> 30min run (tempo or intervals)</li>
-          <li><strong>Thursday:</strong> 45min swim (technique work)</li>
-          <li><strong>Friday:</strong> Rest or easy 20min run</li>
-          <li><strong>Saturday:</strong> 90min bike + 15min transition run</li>
-          <li><strong>Sunday:</strong> 60min run (long steady)</li>
-        </ul>
-        
-        <h2>Time-Saving Strategies</h2>
-        <ul>
-          <li>Early morning sessions (6am) before work - no commute delays</li>
-          <li>Lunchtime swims at work gyms</li>
-          <li>Indoor bike trainer for time-efficient cycling</li>
-          <li>Brick sessions (bike + run) maximize training in less time</li>
-        </ul>
-        
-        <h2>The Reality Check</h2>
-        <p>You won't have time for 15-hour training weeks like full-time athletes. That's fine. Consistency beats volume. Six months of steady 6-8 hour weeks will get you to the finish line strong.</p>
-        
-        <p>Want a personalized plan that fits your work schedule? <a href="/booking">Book a free consultation</a> and we'll design your perfect training week.</p>`,
-        author: "Gabriele Grimaldi",
-        category: "Triathlon",
-        publishedAt: new Date("2024-10-28"),
-        imageUrl: null,
-      },
-      {
-        id: randomUUID(),
-        title: "Understanding FTP: Why Cycling Power Zones Matter",
-        slug: "understanding-ftp-cycling-power-zones",
-        excerpt: "Functional Threshold Power (FTP) is the foundation of effective cycling training. Learn what FTP means, how to test it, and why training with power will transform your performance.",
-        content: `<p>If you're serious about improving your cycling, understanding FTP and power zones is essential. Here's everything you need to know.</p>
-        
-        <h2>What is FTP?</h2>
-        <p>Functional Threshold Power (FTP) is the highest average power you can sustain for approximately one hour. It's measured in watts and represents your physiological lactate threshold on the bike.</p>
-        
-        <h2>Why FTP Matters</h2>
-        <p>Training with power is more precise than heart rate because:</p>
-        <ul>
-          <li>Power responds instantly (heart rate lags)</li>
-          <li>Power isn't affected by caffeine, sleep, or stress</li>
-          <li>You can precisely target specific training adaptations</li>
-          <li>You can pace efforts consistently on race day</li>
-        </ul>
-        
-        <h2>The Five Power Zones</h2>
-        <p>Once you know your FTP, you can calculate training zones:</p>
-        <ul>
-          <li><strong>Zone 1 (Active Recovery):</strong> <55% FTP - Easy spinning</li>
-          <li><strong>Zone 2 (Endurance):</strong> 56-75% FTP - Long steady rides</li>
-          <li><strong>Zone 3 (Tempo):</strong> 76-90% FTP - "Comfortably uncomfortable"</li>
-          <li><strong>Zone 4 (Threshold):</strong> 91-105% FTP - The "sweet spot"</li>
-          <li><strong>Zone 5 (VO2 Max):</strong> >106% FTP - Short, hard intervals</li>
-        </ul>
-        
-        <h2>How to Test Your FTP</h2>
-        <p>The most common protocol is a 20-minute all-out test. Your FTP is approximately 95% of your 20-minute average power. However, this requires proper pacing and mental toughness.</p>
-        
-        <p>Better option: Professional lactate testing provides more accurate results and identifies your exact training zones. <a href="/lactate-testing">Learn about our lactate testing service</a>.</p>
-        
-        <h2>Training Your FTP</h2>
-        <p>To raise FTP, focus on:</p>
-        <ul>
-          <li>Sweet spot intervals (88-94% FTP)</li>
-          <li>Threshold intervals (95-105% FTP)</li>
-          <li>Long endurance rides (building aerobic base)</li>
-          <li>VO2 max intervals (short efforts at 120% FTP)</li>
-        </ul>
-        
-        <p>Ready to train smarter with power? <a href="/booking">Book a consultation</a> to get your personalized FTP-based training plan.</p>`,
-        author: "Gabriele Grimaldi",
-        category: "Cycling",
-        publishedAt: new Date("2024-10-15"),
         imageUrl: null,
       },
       {

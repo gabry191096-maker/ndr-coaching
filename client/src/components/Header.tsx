@@ -57,6 +57,16 @@ export default function Header() {
             </span>
           </Link>
 
+          <Link href="/about" data-testid="link-about">
+            <span
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                location === "/about" ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              About
+            </span>
+          </Link>
+
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
@@ -106,16 +116,6 @@ export default function Header() {
               }`}
             >
               Blog
-            </span>
-          </Link>
-
-          <Link href="/about" data-testid="link-about">
-            <span
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                location === "/about" ? "text-primary" : "text-muted-foreground"
-              }`}
-            >
-              About
             </span>
           </Link>
 
@@ -207,6 +207,18 @@ export default function Header() {
               </button>
             </Link>
 
+            <Link href="/about">
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className={`block w-full text-left rounded-md px-3 py-2 text-base font-medium transition-colors hover:bg-accent ${
+                  location === "/about" ? "bg-accent text-accent-foreground" : ""
+                }`}
+                data-testid="mobile-link-about"
+              >
+                About
+              </button>
+            </Link>
+
             <div className="pt-2">
               <p className="px-3 text-sm font-semibold text-muted-foreground mb-2">Coaching</p>
               {coachingServices.map((service) => (
@@ -246,18 +258,6 @@ export default function Header() {
                 data-testid="mobile-link-blog"
               >
                 Blog
-              </button>
-            </Link>
-
-            <Link href="/about">
-              <button
-                onClick={() => setMobileMenuOpen(false)}
-                className={`block w-full text-left rounded-md px-3 py-2 text-base font-medium transition-colors hover:bg-accent ${
-                  location === "/about" ? "bg-accent text-accent-foreground" : ""
-                }`}
-                data-testid="mobile-link-about"
-              >
-                About
               </button>
             </Link>
 
