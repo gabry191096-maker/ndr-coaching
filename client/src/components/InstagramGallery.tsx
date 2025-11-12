@@ -1,22 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Instagram } from "lucide-react";
-import gallery1 from "@assets/gallery-1.jpg";
-import gallery2 from "@assets/gallery-2.jpg";
-import gallery3 from "@assets/gallery-3.jpg";
-import gallery4 from "@assets/gallery-4.jpg";
-import gallery5 from "@assets/gallery-5.jpg";
-import gallery6 from "@assets/gallery-6.jpg";
-
-const galleryImages = [
-  gallery1,
-  gallery2,
-  gallery3,
-  gallery4,
-  gallery5,
-  gallery6,
-];
+import { useEffect } from "react";
 
 export default function InstagramGallery() {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://www.instagram.com/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+    
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <section className="py-16 md:py-20 bg-muted/30">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -29,23 +26,26 @@ export default function InstagramGallery() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {galleryImages.map((image, index) => (
-            <a
-              key={index}
-              href="https://instagram.com/gabrygrim"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="aspect-square overflow-hidden rounded-md hover-elevate transition-all duration-300"
-              data-testid={`instagram-image-${index}`}
+        <div className="flex justify-center">
+          <div className="w-full max-w-4xl">
+            <blockquote 
+              className="instagram-media" 
+              data-instgrm-permalink="https://www.instagram.com/gabrygrim/?utm_source=ig_embed&amp;utm_campaign=loading" 
+              data-instgrm-version="14"
+              style={{
+                background: '#FFF',
+                border: '0',
+                borderRadius: '3px',
+                boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)',
+                margin: '1px',
+                maxWidth: '540px',
+                minWidth: '326px',
+                padding: '0',
+                width: 'calc(100% - 2px)'
+              }}
             >
-              <img
-                src={image}
-                alt={`Training moment ${index + 1}`}
-                className="h-full w-full object-cover transition-transform duration-300 hover:scale-110"
-              />
-            </a>
-          ))}
+            </blockquote>
+          </div>
         </div>
 
         <div className="text-center mt-8">
