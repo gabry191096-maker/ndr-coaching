@@ -192,7 +192,7 @@ export default function PacingCalculatorPage() {
                           <SelectValue />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="sprint">Sprint (5-7.5km run)</SelectItem>
+                          <SelectItem value="sprint">Sprint (5km run)</SelectItem>
                           <SelectItem value="standard">Standard/Olympic (10km run)</SelectItem>
                           <SelectItem value="70.3">70.3/Half Ironman (21.1km run)</SelectItem>
                           <SelectItem value="ironman">Full Ironman (42.2km run)</SelectItem>
