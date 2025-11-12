@@ -35,12 +35,15 @@ Preferred communication style: Simple, everyday language.
 - Path aliases configured (@/ for client/src, @shared/ for shared, @assets/ for assets)
 
 **Key Features**
-- SEO optimization with dynamic meta tag management
+- SEO optimization with dynamic meta tag management (sitemap.xml, robots.txt)
 - Calendly widget integration for booking consultations
 - Instagram gallery integration
 - Blog functionality with sanitized HTML content (DOMPurify)
 - Responsive design with mobile-first approach
 - Scroll restoration on route changes
+- Lead generation popup (appears after 10 seconds, shows once per visitor)
+- Triathlon pacing calculator with LT1/LT2 zone recommendations
+- Admin dashboard for viewing/exporting email subscribers (protected by authentication)
 
 ### Backend Architecture
 
@@ -64,9 +67,13 @@ Preferred communication style: Simple, everyday language.
 - Schema includes: users table, blog_posts table with UUID primary keys
 - Database connection via @neondatabase/serverless (Neon Postgres)
 
-**Session Management**
-- connect-pg-simple for PostgreSQL-backed sessions (configured but not actively used)
-- Session data structure prepared for authentication flows
+**Session Management & Authentication**
+- express-session with httpOnly cookies for secure session management
+- 24-hour session timeout
+- Session regeneration on login to prevent session fixation attacks
+- Admin authentication system protecting subscriber dashboard
+- Rate limiting on login attempts (5 per 15 minutes per IP)
+- Credentials stored in Replit Secrets (ADMIN_USERNAME, ADMIN_PASSWORD)
 
 **Content Security**
 - DOMPurify (isomorphic) for sanitizing user-generated HTML content
@@ -91,6 +98,12 @@ Preferred communication style: Simple, everyday language.
 - publishedAt: timestamp (auto-generated)
 - imageUrl: text (optional featured image)
 
+**Email Subscriber Schema**
+- id: UUID (auto-generated)
+- email: unique text
+- subscribedAt: timestamp (auto-generated)
+- discountClaimed: text (default: "15OFF")
+
 ### Routing Structure
 
 **Client Routes**
@@ -105,11 +118,19 @@ Preferred communication style: Simple, everyday language.
 - `/blog/:slug` - Individual blog post page
 - `/booking` - Booking page with Calendly integration
 - `/contact` - Contact page with form
+- `/pacing-calculator` - Triathlon pacing calculator (LT1/LT2 based)
+- `/admin/login` - Admin login page (protected)
+- `/admin/subscribers` - Email subscriber dashboard (protected)
 
 **API Routes**
 - `GET /api/blog` - Retrieve all blog posts
 - `GET /api/blog/:slug` - Retrieve single blog post by slug
 - `POST /api/blog` - Create new blog post (with validation and sanitization)
+- `POST /api/subscribe` - Submit email for newsletter subscription (returns 15OFF discount code)
+- `GET /api/subscribers` - Retrieve all email subscribers (PROTECTED - requires admin auth)
+- `POST /api/auth/login` - Admin login (creates authenticated session)
+- `POST /api/auth/logout` - Admin logout (destroys session)
+- `GET /api/auth/session` - Check current authentication status
 
 ### Design System
 
