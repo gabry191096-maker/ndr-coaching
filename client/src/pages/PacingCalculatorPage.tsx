@@ -75,10 +75,10 @@ export default function PacingCalculatorPage() {
         description = "Olympic distance: Run slightly below LT2, about 95-98% of your LT2 pace (close to 10k best).";
         break;
       case "70.3":
-        // LT1 pace
-        targetSeconds = lt1Seconds;
-        percentOfLT2 = 92;
-        description = "Half Ironman: Run at your LT1 pace (half marathon pace), roughly 92-95% of LT2.";
+        // Between LT1 and LT2 - the sweet spot
+        targetSeconds = (lt1Seconds + lt2Seconds) / 2;
+        percentOfLT2 = 95;
+        description = "Half Ironman: Run between LT1 and LT2 (a bit faster than LT1), targeting the sweet spot for sustained aerobic effort without lactate accumulation.";
         break;
       case "ironman":
         // LT1 or slightly below
