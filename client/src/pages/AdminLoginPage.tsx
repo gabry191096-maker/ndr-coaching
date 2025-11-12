@@ -21,16 +21,16 @@ export default function AdminLoginPage() {
   const loginMutation = useMutation({
     mutationFn: async (credentials: { username: string; password: string }) => {
       const response = await apiRequest("POST", "/api/auth/login", credentials);
-      return response;
+      const data = await response.json();
+      return data;
     },
     onSuccess: () => {
       toast({
         title: "Login Successful",
-        description: "Welcome back! Redirecting to admin dashboard...",
+        description: "Welcome back!",
       });
-      setTimeout(() => {
-        setLocation("/admin/subscribers");
-      }, 500);
+      // Immediate redirect to admin dashboard
+      setLocation("/admin/subscribers");
     },
     onError: (error: any) => {
       toast({
