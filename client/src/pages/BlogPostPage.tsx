@@ -118,8 +118,8 @@ export default function BlogPostPage() {
               className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-foreground prose-li:text-foreground prose-strong:text-primary prose-a:text-primary hover:prose-a:text-primary/80"
               dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.content, {
                 ADD_TAGS: ['iframe'],
-                ADD_ATTR: ['allowtransparency', 'frameborder', 'scrolling', 'height', 'width', 'src'],
-                ALLOWED_URI_REGEXP: /^(?:https:\/\/www\.strava\.com\/routes\/\d+\/embed)/
+                ADD_ATTR: ['allowtransparency', 'frameborder', 'scrolling', 'height', 'width', 'src', 'target', 'rel'],
+                ALLOWED_URI_REGEXP: /^(?:(?:https?:\/\/)?(?:www\.)?strava\.com|\/)/
               }) }}
               data-testid="text-post-content"
             />

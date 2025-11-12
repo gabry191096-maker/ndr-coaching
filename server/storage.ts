@@ -42,8 +42,16 @@ export class MemStorage implements IStorage {
         <p>The park's perimeter is ideal for interval training sessions. The interior paths offer varied terrain with some gentle hills - perfect for building strength while staying close to home. Features include Thames riverside views, ponds, gardens, and public facilities near the bandstand.</p>
         <p><strong>Training tip:</strong> Use the 2km perimeter for 5x2km threshold intervals with 90 seconds recovery.</p>
         
-        <div class="my-6">
-          <iframe height="405" width="100%" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/routes/127024/embed"></iframe>
+        <div class="my-6 p-6 bg-card border border-border rounded-lg hover:border-primary transition-colors">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-semibold text-foreground">View Route on Strava</h3>
+            <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"/></svg>
+          </div>
+          <p class="text-sm text-muted-foreground mb-4">Battersea Park Loop - 2.7km circuit with flat terrain, perfect for intervals and warm-ups.</p>
+          <a href="https://www.strava.com/routes/127024" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors font-medium">
+            View Interactive Map
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
         </div>
 
         <h2>2. Thames Path - Battersea to Westminster (6.5km loop)</h2>
@@ -53,8 +61,16 @@ export class MemStorage implements IStorage {
         <p>The Thames Path offers flat, scenic running with iconic views. Start at Battersea Park and head east toward Westminster, crossing back via Albert Bridge. The south bank is more runner-friendly with wider pedestrian paths and fewer diversions. Pass Battersea Power Station, the London Peace Pagoda, and Houses of Parliament.</p>
         <p><strong>Popular Strava route:</strong> This is one of the most tracked routes in London. Early morning (6-7am) avoids the heaviest foot traffic.</p>
         
-        <div class="my-6">
-          <iframe height="405" width="100%" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/routes/119101/embed"></iframe>
+        <div class="my-6 p-6 bg-card border border-border rounded-lg hover:border-primary transition-colors">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-semibold text-foreground">View Route on Strava</h3>
+            <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"/></svg>
+          </div>
+          <p class="text-sm text-muted-foreground mb-4">Thames Path - 5.9 mile riverside route with iconic London landmarks and completely flat terrain.</p>
+          <a href="https://www.strava.com/routes/119101" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors font-medium">
+            View Interactive Map
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
         </div>
 
         <h2>3. Wandsworth Common Loop (4.3km)</h2>
@@ -64,8 +80,16 @@ export class MemStorage implements IStorage {
         <p>This quiet common provides a peaceful escape from busy streets. The soft paths are easier on your joints, making it excellent for recovery runs or building base mileage. The relatively flat circular route around the common is perfect for consistent pacing.</p>
         <p><strong>Find on Strava:</strong> Search "Wandsworth Common Loop" - highly popular with local runners.</p>
         
-        <div class="my-6">
-          <iframe height="405" width="100%" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/routes/297452/embed"></iframe>
+        <div class="my-6 p-6 bg-card border border-border rounded-lg hover:border-primary transition-colors">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-semibold text-foreground">View Route on Strava</h3>
+            <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"/></svg>
+          </div>
+          <p class="text-sm text-muted-foreground mb-4">Wandsworth Common Loop - 4.3km peaceful circuit with soft paths, ideal for recovery runs.</p>
+          <a href="https://www.strava.com/routes/297452" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors font-medium">
+            View Interactive Map
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
         </div>
 
         <h2>4. Battersea Park to Wandsworth Common (13.5km)</h2>
@@ -81,8 +105,16 @@ export class MemStorage implements IStorage {
         <p><strong>Best for:</strong> 10k race pace training, Thames-side loops, varied distance options</p>
         <p>Run through Battersea Park, Wandsworth, Fulham and Chelsea. This popular loop connects multiple riverside areas and green spaces. Year-round route with excellent facilities.</p>
         
-        <div class="my-6">
-          <iframe height="405" width="100%" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/routes/943844/embed"></iframe>
+        <div class="my-6 p-6 bg-card border border-border rounded-lg hover:border-primary transition-colors">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-semibold text-foreground">View Route on Strava</h3>
+            <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"/></svg>
+          </div>
+          <p class="text-sm text-muted-foreground mb-4">10K Loop - Connects Battersea Park, Wandsworth, Fulham, and Chelsea for varied riverside running.</p>
+          <a href="https://www.strava.com/routes/943844" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors font-medium">
+            View Interactive Map
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
         </div>
 
         <h2>Popular Strava Route: Clapham-Balham-Tooting-Wandsworth 10K</h2>
