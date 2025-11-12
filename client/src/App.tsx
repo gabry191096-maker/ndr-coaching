@@ -9,6 +9,9 @@ import AboutPage from "@/pages/AboutPage";
 import BookingPage from "@/pages/BookingPage";
 import ContactPage from "@/pages/ContactPage";
 import LactateTestingPage from "@/pages/LactateTestingPage";
+import TriathlonPage from "@/pages/TriathlonPage";
+import CyclingPage from "@/pages/CyclingPage";
+import RunningPage from "@/pages/RunningPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -16,6 +19,9 @@ function Router() {
     <Switch>
       <Route path="/" component={HomePage} />
       <Route path="/services" component={ServicesPage} />
+      <Route path="/triathlon" component={TriathlonPage} />
+      <Route path="/cycling" component={CyclingPage} />
+      <Route path="/running" component={RunningPage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/booking" component={BookingPage} />
       <Route path="/contact" component={ContactPage} />

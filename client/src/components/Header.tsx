@@ -17,9 +17,9 @@ export default function Header() {
   const [location] = useLocation();
 
   const coachingServices = [
-    { name: "Triathlon", href: "/services#triathlon" },
-    { name: "Cycling", href: "/services#cycling" },
-    { name: "Running", href: "/services#running" },
+    { name: "Triathlon", href: "/triathlon" },
+    { name: "Cycling", href: "/cycling" },
+    { name: "Running", href: "/running" },
   ];
 
   const testingServices = [

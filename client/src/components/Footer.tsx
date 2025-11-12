@@ -51,17 +51,17 @@ export default function Footer() {
             <h4 className="font-heading font-semibold mb-4">Coaching</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/services#triathlon">
+                <Link href="/triathlon">
                   <span className="text-muted-foreground hover:text-primary transition-colors">Triathlon</span>
                 </Link>
               </li>
               <li>
-                <Link href="/services#cycling">
+                <Link href="/cycling">
                   <span className="text-muted-foreground hover:text-primary transition-colors">Cycling</span>
                 </Link>
               </li>
               <li>
-                <Link href="/services#running">
+                <Link href="/running">
                   <span className="text-muted-foreground hover:text-primary transition-colors">Running</span>
                 </Link>
               </li>
