@@ -55,7 +55,7 @@ export default function ServicesPage() {
             </div>
 
             <div id="triathlon" className="mb-20">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="aspect-video overflow-hidden rounded-lg">
                   <img src={triathlonImage} alt="Triathlon Training" className="w-full h-full object-cover" />
                 </div>
@@ -65,13 +65,14 @@ export default function ServicesPage() {
                     Complete swim, bike, run training for Ironman, 70.3, and Olympic distance events. Get structured workouts across all three disciplines with expert guidance.
                   </p>
                   <ul className="space-y-3 mb-6">
-                    {["Periodized training blocks", "Swim technique sessions", "Bike power & run pacing", "Transition practice", "Race day strategy"].map((item, i) => (
+                    {["Periodized training blocks", "Swim technique sessions", "Bike power & run pacing", "Transition practice", "Race day strategy", "Weekly reviews", "WhatsApp support"].map((item, i) => (
                       <li key={i} className="flex items-start gap-2">
                         <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </li>
                     ))}
                   </ul>
+                  <p className="text-3xl font-heading font-bold text-primary mb-6">£149<span className="text-lg text-muted-foreground font-normal">/month</span></p>
                   <div className="flex gap-4">
                     <Link href="/booking">
                       <Button size="lg" data-testid="button-book-triathlon">Book Consultation</Button>
@@ -81,88 +82,6 @@ export default function ServicesPage() {
                     </Link>
                   </div>
                 </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Starter</CardTitle>
-                    <CardDescription>Perfect for your first triathlon</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-3xl font-heading font-bold text-primary mb-4">£150<span className="text-base text-muted-foreground">/month</span></p>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span>Basic training plan</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span>Monthly check-ins</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span>Email support</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-primary">
-                  <CardHeader>
-                    <CardTitle>Performance</CardTitle>
-                    <CardDescription>Most popular for serious athletes</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-3xl font-heading font-bold text-primary mb-4">£200<span className="text-base text-muted-foreground">/month</span></p>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span>Advanced training plan</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span>Weekly reviews</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span>WhatsApp support</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span>Lactate testing included</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Elite</CardTitle>
-                    <CardDescription>For podium contenders</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-3xl font-heading font-bold text-primary mb-4">£300<span className="text-base text-muted-foreground">/month</span></p>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span>Bespoke elite plan</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span>Daily adjustments</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span>24/7 support</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span>In-person sessions</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
               </div>
             </div>
 
@@ -181,7 +100,7 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <p className="text-2xl font-heading font-bold text-primary mb-4">From £150/month</p>
+                  <p className="text-3xl font-heading font-bold text-primary mb-6">£119<span className="text-lg text-muted-foreground font-normal">/month</span></p>
                   <div className="flex gap-4">
                     <Link href="/booking">
                       <Button size="lg" data-testid="button-book-cycling">Book Consultation</Button>
@@ -212,7 +131,7 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <p className="text-2xl font-heading font-bold text-primary mb-4">From £120/month</p>
+                  <p className="text-3xl font-heading font-bold text-primary mb-6">£119<span className="text-lg text-muted-foreground font-normal">/month</span></p>
                   <div className="flex gap-4">
                     <Link href="/booking">
                       <Button size="lg" data-testid="button-book-running">Book Consultation</Button>
