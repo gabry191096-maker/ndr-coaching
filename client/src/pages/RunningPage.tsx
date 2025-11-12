@@ -52,6 +52,7 @@ export default function RunningPage() {
         title="Running Coaching London - Marathon & Half Marathon Training Plans"
         description="Expert running coaching for marathons and half marathons in London. Personalized training plans for busy professionals. Science-backed methods. £119/month."
         keywords="running coaching London, marathon coach, half marathon training, running training plan, London marathon coach"
+        path="/running"
       />
       <Header />
       <main className="flex-1">

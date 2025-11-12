@@ -52,6 +52,7 @@ export default function CyclingPage() {
         title="Cycling Coaching London - Power-Based Training for Sportives & Gran Fondos"
         description="Expert cycling coaching in London. FTP-focused training for sportives, gran fondos, and time trials. Personalized power-based plans. £119/month."
         keywords="cycling coaching London, FTP training, sportive coaching, gran fondo training, time trial coach, power meter training"
+        path="/cycling"
       />
       <Header />
       <main className="flex-1">

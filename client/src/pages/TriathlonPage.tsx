@@ -52,6 +52,7 @@ export default function TriathlonPage() {
         title="Triathlon Coaching London - Ironman & 70.3 Training Plans"
         description="Expert triathlon coaching for Ironman, 70.3, and Olympic distance events in London. Personalized swim-bike-run training for busy professionals. £149/month."
         keywords="triathlon coaching London, Ironman coach, 70.3 training, Olympic triathlon, swim bike run coach, triathlon training plan"
+        path="/triathlon"
       />
       <Header />
       <main className="flex-1">

@@ -121,6 +121,7 @@ export default function LactateTestingPage() {
         title="Lactate Threshold Testing London - Performance Testing for Athletes"
         description="Professional lactate threshold testing in London for cyclists, runners, and triathletes. Accurate training zones, heart rate testing, and performance optimization. £150 per session."
         keywords="lactate testing London, lactate threshold test, performance testing London, VO2 max testing, heart rate zones, cycling performance test, running performance test, sports science testing London"
+        path="/lactate-testing"
       />
       <Header />
       <main className="flex-1">
