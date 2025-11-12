@@ -24,6 +24,9 @@ interface PowerResult {
 }
 
 export default function PacingCalculatorPage() {
+  // Unit selection
+  const [unit, setUnit] = useState<"km" | "miles">("km");
+  
   // Running calculator state
   const [runningRaceDistance, setRunningRaceDistance] = useState<RaceDistance>("standard");
   const [runningLT1Pace, setRunningLT1Pace] = useState("");
@@ -164,6 +167,25 @@ export default function PacingCalculatorPage() {
               </p>
             </div>
 
+            <div className="mx-auto max-w-4xl mb-6">
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex items-center justify-center gap-4">
+                    <Label htmlFor="unit-selector" className="text-base font-semibold">Distance Unit:</Label>
+                    <Select value={unit} onValueChange={(value) => setUnit(value as "km" | "miles")}>
+                      <SelectTrigger id="unit-selector" className="w-40" data-testid="select-unit">
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="km">Kilometers (km)</SelectItem>
+                        <SelectItem value="miles">Miles</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
             <Tabs defaultValue="running" className="mx-auto max-w-4xl">
               <TabsList className="grid w-full grid-cols-2 mb-8">
                 <TabsTrigger value="running" className="flex items-center gap-2" data-testid="tab-running">
@@ -192,37 +214,49 @@ export default function PacingCalculatorPage() {
                           <SelectValue />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="sprint">Sprint (5km run)</SelectItem>
-                          <SelectItem value="standard">Standard/Olympic (10km run)</SelectItem>
-                          <SelectItem value="70.3">70.3/Half Ironman (21.1km run)</SelectItem>
-                          <SelectItem value="ironman">Full Ironman (42.2km run)</SelectItem>
+                          <SelectItem value="sprint">
+                            Sprint ({unit === "km" ? "5km / 3.1 miles" : "3.1 miles / 5km"})
+                          </SelectItem>
+                          <SelectItem value="standard">
+                            Standard/Olympic ({unit === "km" ? "10km / 6.2 miles" : "6.2 miles / 10km"})
+                          </SelectItem>
+                          <SelectItem value="70.3">
+                            70.3/Half Ironman ({unit === "km" ? "21.1km / 13.1 miles" : "13.1 miles / 21.1km"})
+                          </SelectItem>
+                          <SelectItem value="ironman">
+                            Full Ironman ({unit === "km" ? "42.2km / 26.2 miles" : "26.2 miles / 42.2km"})
+                          </SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="lt1-pace">LT1 Pace (min:sec per km)</Label>
+                        <Label htmlFor="lt1-pace">LT1 Pace (min:sec per {unit === "km" ? "km" : "mile"})</Label>
                         <Input
                           id="lt1-pace"
-                          placeholder="5:00"
+                          placeholder={unit === "km" ? "5:00" : "8:00"}
                           value={runningLT1Pace}
                           onChange={(e) => setRunningLT1Pace(e.target.value)}
                           data-testid="input-lt1-pace"
                         />
-                        <p className="text-xs text-muted-foreground">Format: MM:SS (e.g., 5:00 for 5 min/km)</p>
+                        <p className="text-xs text-muted-foreground">
+                          Format: MM:SS (e.g., {unit === "km" ? "5:00 for 5 min/km" : "8:00 for 8 min/mile"})
+                        </p>
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="lt2-pace">LT2 Pace (min:sec per km)</Label>
+                        <Label htmlFor="lt2-pace">LT2 Pace (min:sec per {unit === "km" ? "km" : "mile"})</Label>
                         <Input
                           id="lt2-pace"
-                          placeholder="4:30"
+                          placeholder={unit === "km" ? "4:30" : "7:15"}
                           value={runningLT2Pace}
                           onChange={(e) => setRunningLT2Pace(e.target.value)}
                           data-testid="input-lt2-pace"
                         />
-                        <p className="text-xs text-muted-foreground">Format: MM:SS (e.g., 4:30 for 4:30 min/km)</p>
+                        <p className="text-xs text-muted-foreground">
+                          Format: MM:SS (e.g., {unit === "km" ? "4:30 for 4:30 min/km" : "7:15 for 7:15 min/mile"})
+                        </p>
                       </div>
                     </div>
 
@@ -234,7 +268,7 @@ export default function PacingCalculatorPage() {
                             <span className="text-4xl font-bold text-primary" data-testid="text-target-pace">
                               {runningResult.targetPace}
                             </span>
-                            <span className="text-lg text-muted-foreground">per km</span>
+                            <span className="text-lg text-muted-foreground">per {unit === "km" ? "km" : "mile"}</span>
                           </div>
                           <p className="text-sm text-muted-foreground">
                             ({runningResult.percentOfLT2} of LT2)
