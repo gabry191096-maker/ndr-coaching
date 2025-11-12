@@ -83,8 +83,8 @@ export default function AboutPage() {
                 Competition Achievements
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div className="aspect-video overflow-hidden rounded-lg">
-                  <img src={achievementsImage} alt="Gabriele achievements" className="w-full h-full object-cover" />
+                <div className="aspect-[4/5] overflow-hidden rounded-lg bg-muted">
+                  <img src={achievementsImage} alt="Gabriele achievements" className="w-full h-full object-contain" />
                 </div>
                 <div>
                   <ul className="space-y-4">
