@@ -86,36 +86,43 @@ Railway automatically detects your setup, but verify in **Settings** tab:
 
 After your app is deployed, you need to run migrations **once**:
 
-**Method 1: Railway CLI (Recommended)**
+**Method 1: Railway Shell (Simplest)**
+1. After first successful deploy, go to **"Deployments"** tab
+2. Click the running deployment → **"Shell"** button (or **"Terminal"** icon)
+3. Install tsx temporarily and run migrations:
+   ```bash
+   npm install -g tsx
+   tsx scripts/migrate.ts
+   tsx scripts/seed.ts
+   ```
+4. Verify in logs that migrations completed successfully
+
+**Method 2: Railway CLI (For Local Control)**
 ```bash
-# Install Railway CLI
+# Install Railway CLI locally
 npm i -g @railway/cli
 
 # Login and link to your project
 railway login
 railway link
 
-# Run migrations remotely
-railway run tsx scripts/migrate.ts
-railway run tsx scripts/seed.ts
+# Run migrations remotely (tsx will be installed on-demand via npx)
+railway run npx tsx scripts/migrate.ts
+railway run npx tsx scripts/seed.ts
 ```
 
-**Method 2: Railway Console**
+**Method 3: One-Time Deploy Hook**
 1. Go to your web service → **"Settings"** → **"Deploy Triggers"**
-2. Add **"Run Command on Deploy"** (one-time):
+2. Add **"Run Command on Deploy"** (one-time use):
    ```bash
    npx tsx scripts/migrate.ts && npx tsx scripts/seed.ts
    ```
-3. After migrations complete successfully, **remove this trigger** to prevent re-running on every deploy
+3. **Important**: After migrations complete successfully (check deployment logs), immediately **remove this trigger** to prevent re-running on every future deploy
 
-**Method 3: Manual via Deployments**
-1. After first successful deploy, go to **"Deployments"** tab
-2. Click the running deployment → **"Shell"** button
-3. Run in the shell:
-   ```bash
-   npx tsx scripts/migrate.ts
-   npx tsx scripts/seed.ts
-   ```
+**Verify Migrations Worked:**
+- Check deployment logs for "Migrations completed successfully!"
+- Check deployment logs for "Seeded 2 blog posts successfully!"
+- Visit your app's `/blog` page - you should see the sample blog posts
 
 ### Step 8: Connect Custom Domain
 
@@ -201,7 +208,13 @@ If you want **completely free** hosting and can tolerate sleep mode:
 
 6. **Run Migrations** (After first deploy):
    - Go to your service → **"Shell"** tab
-   - Run:
+   - Install tsx and run migrations:
+     ```bash
+     npm install -g tsx
+     tsx scripts/migrate.ts
+     tsx scripts/seed.ts
+     ```
+   - Or use npx (slower but no install needed):
      ```bash
      npx tsx scripts/migrate.ts
      npx tsx scripts/seed.ts
