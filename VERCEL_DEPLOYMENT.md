@@ -1,12 +1,31 @@
-# Vercel Deployment Guide for NDR Coaching
+# Deployment Guide for NDR Coaching
 
-This guide will help you deploy your NDR Coaching website to Vercel for **FREE hosting**.
+This guide provides deployment options to **significantly reduce your hosting costs** compared to Replit's paid subscription.
+
+## 🎯 Deployment Options
+
+### Option 1: Render (Free with limitations)
+- **Cost:** $0/month
+- **Limitations:** App sleeps after 15 min inactivity (50s cold start)
+- **Best for:** Demo sites, low-traffic projects
+- **Database:** Neon free tier (persistent)
+
+### Option 2: Railway ($5/month - **RECOMMENDED**)
+- **Cost:** $5/month (vs $20+ for Replit)
+- **Savings:** $15+/month 
+- **No sleep mode:** Always-on, instant responses
+- **Best for:** Production sites, client-facing apps
+- **Database:** Neon free tier or Railway PostgreSQL
+
+### Option 3: Vercel (Requires significant refactoring)
+- **Not recommended** - Your Express app uses sessions which don't work in Vercel's serverless environment
+- Would require major code changes (external session store, refactored auth)
 
 ## 📋 Prerequisites
 
 1. **GitHub account** (to store your code)
-2. **Vercel account** (free tier - sign up at vercel.com)
-3. **Free database** (Neon or Supabase)
+2. **Render or Railway account** (free signup)
+3. **Free database** (Neon - recommended)
 4. **Your environment secrets** (admin credentials, session secret)
 
 ---
