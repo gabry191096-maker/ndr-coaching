@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ContactForm from "@/components/ContactForm";
 import SEO from "@/components/SEO";
 
 export default function ContactPage() {
@@ -24,7 +23,6 @@ export default function ContactPage() {
               </p>
             </div>
           </div>
-          <ContactForm />
         </div>
       </main>
       <Footer />
