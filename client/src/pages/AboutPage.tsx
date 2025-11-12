@@ -7,7 +7,7 @@ import { Award, Target, Users, TrendingUp } from "lucide-react";
 import { Link } from "wouter";
 import coachImage from "@assets/gabriele-grimaldi.png";
 import coachingImage from "@assets/about-main.jpeg";
-import achievementsImage from "@assets/4B5B17DE-7E18-4CE4-8CB4-7B3D579377EC_4_5005_c_1762950420755.jpeg";
+import achievementsImage from "@assets/B00ED0FB-4D8C-4294-BE24-BAC8149B8D69_1_105_c_1762950620558.jpeg";
 
 export default function AboutPage() {
   const achievements = [
@@ -83,8 +83,8 @@ export default function AboutPage() {
                 Competition Achievements
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div className="aspect-[4/5] overflow-hidden rounded-lg bg-muted">
-                  <img src={achievementsImage} alt="Gabriele achievements" className="w-full h-full object-contain" />
+                <div className="aspect-video overflow-hidden rounded-lg">
+                  <img src={achievementsImage} alt="Gabriele achievements" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <ul className="space-y-4">
