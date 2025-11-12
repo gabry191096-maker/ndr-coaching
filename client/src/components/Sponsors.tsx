@@ -16,7 +16,7 @@ export default function Sponsors() {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-muted/30">
+    <section className="py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-heading font-semibold mb-4">
@@ -27,17 +27,17 @@ export default function Sponsors() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center">
           {sponsors.map((sponsor, index) => (
             <div 
               key={index} 
-              className="flex items-center justify-center p-4 rounded-lg h-24 bg-white"
+              className="flex items-center justify-center p-6 rounded-lg h-32 bg-card border border-border hover-elevate transition-all"
               data-testid={`sponsor-${sponsor.name.toLowerCase().replace(/\s/g, '-')}`}
             >
               <img 
                 src={sponsor.logo} 
                 alt={sponsor.name} 
-                className="max-h-full max-w-full object-contain"
+                className="max-h-20 max-w-full object-contain filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
               />
             </div>
           ))}
