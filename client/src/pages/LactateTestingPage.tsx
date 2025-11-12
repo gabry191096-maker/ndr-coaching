@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle2, FlaskConical, TrendingUp, Target, Clock } from "lucide-react";
 import { Link } from "wouter";
-import lactateTestingImage from "@assets/gallery-6.jpg";
+import lactateTestingImage from "@assets/EB155832-C85D-4102-A665-24C80F4F9913_4_5005_c_1762950401783.jpeg";
 
 export default function LactateTestingPage() {
   const benefits = [
