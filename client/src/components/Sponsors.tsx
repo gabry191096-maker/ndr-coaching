@@ -50,15 +50,15 @@ export default function Sponsors() {
           </p>
         </div>
 
-        <div className="bg-white rounded-xl p-12 shadow-lg">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 items-center justify-items-center">
+        <div className="bg-white rounded-xl p-6 md:p-12 shadow-lg">
+          <div className="flex md:grid overflow-x-auto md:overflow-x-visible md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12 items-center md:justify-items-center pb-4 md:pb-0 scrollbar-hide">
             {sponsors.map((sponsor, index) => (
               <a
                 key={index}
                 href={sponsor.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`flex items-center justify-center w-full transition-all duration-700 ease-out ${
+                className={`flex items-center justify-center flex-shrink-0 w-40 md:w-full transition-all duration-700 ease-out ${
                   isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
@@ -67,7 +67,7 @@ export default function Sponsors() {
                 <img 
                   src={sponsor.logo} 
                   alt={sponsor.name} 
-                  className="max-h-32 w-auto object-contain hover:scale-110 transition-transform duration-300"
+                  className="max-h-24 md:max-h-32 w-auto object-contain hover:scale-110 transition-transform duration-300"
                 />
               </a>
             ))}
