@@ -4,6 +4,7 @@ import DOMPurify from "isomorphic-dompurify";
 import { storage } from "./storage";
 import { insertBlogPostSchema, insertEmailSubscriberSchema } from "@shared/schema";
 import { requireAuth } from "./middleware/auth";
+import { Resend } from "resend";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Rate limiting for login attempts
@@ -140,6 +141,50 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
     } catch (error) {
       res.status(400).json({ message: "Invalid email address" });
+    }
+  });
+
+    // Contact form route
+  app.post("/api/contact", async (req, res) => {
+    try {
+      const { name, email, message } = req.body;
+
+      // Validate input
+      if (!name || !email || !message) {
+        return res.status(400).json({ message: "All fields are required" });
+      }
+
+      // Basic email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        return res.status(400).json({ message: "Invalid email address" });
+      }
+
+      // Initialize Resend
+      const resend = new Resend(process.env.RESEND_API_KEY);
+
+      // Sanitize message content
+      const sanitizedMessage = DOMPurify.sanitize(message);
+
+      // Send email
+      await resend.emails.send({
+        from: "Contact Form <onboarding@resend.dev>",
+        to: [process.env.RECIPIENT_EMAIL || "gabriele@ndrcoaching.co.uk"],
+        replyTo: email,
+        subject: `New Contact Form Submission from ${name}`,
+        html: `
+          <h2>New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Message:</strong></p>
+          <p>${sanitizedMessage}</p>
+        `,
+      });
+
+      res.status(200).json({ message: "Message sent successfully!" });
+    } catch (error) {
+      console.error("Contact form error:", error);
+      res.status(500).json({ message: "Failed to send message. Please try again." });
     }
   });
 
