@@ -15,6 +15,7 @@ export interface IStorage {
   
   createEmailSubscriber(subscriber: InsertEmailSubscriber): Promise<EmailSubscriber>;
   getEmailSubscriberByEmail(email: string): Promise<EmailSubscriber | undefined>;
+  getAllEmailSubscribers(): Promise<EmailSubscriber[]>;
 }
 
 export class MemStorage implements IStorage {
@@ -334,6 +335,12 @@ export class MemStorage implements IStorage {
 
   async getEmailSubscriberByEmail(email: string): Promise<EmailSubscriber | undefined> {
     return this.emailSubscribers.get(email);
+  }
+
+  async getAllEmailSubscribers(): Promise<EmailSubscriber[]> {
+    return Array.from(this.emailSubscribers.values()).sort(
+      (a, b) => new Date(b.subscribedAt).getTime() - new Date(a.subscribedAt).getTime()
+    );
   }
 }
 

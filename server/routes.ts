@@ -41,7 +41,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Email subscriber route
+  // Email subscriber routes
   app.post("/api/subscribe", async (req, res) => {
     try {
       const validatedData = insertEmailSubscriberSchema.parse(req.body);
@@ -63,6 +63,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       res.status(400).json({ message: "Invalid email address" });
     }
+  });
+
+  app.get("/api/subscribers", async (_req, res) => {
+    const subscribers = await storage.getAllEmailSubscribers();
+    res.json(subscribers);
   });
 
   const httpServer = createServer(app);
