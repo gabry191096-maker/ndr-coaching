@@ -96,7 +96,6 @@ export class MemStorage implements IStorage {
         <ul>
           <li><strong>Early morning runs (6-7am)</strong> avoid crowds and summer heat, especially on Thames Path</li>
           <li><strong>Weekend long runs:</strong> Thames Path west toward Richmond offers 10-20km options</li>
-          <li><strong>Hill repeats:</strong> Use the bridges (Albert Bridge, Chelsea Bridge, Wandsworth Bridge) for strength work</li>
           <li><strong>Interval training:</strong> Battersea Park perimeter is perfect for 5x2km or 10x1km sessions</li>
           <li><strong>Recovery runs:</strong> Wandsworth Common's soft paths are ideal for easy days</li>
         </ul>
