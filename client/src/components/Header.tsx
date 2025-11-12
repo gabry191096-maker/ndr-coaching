@@ -99,6 +99,16 @@ export default function Header() {
             </NavigationMenuList>
           </NavigationMenu>
 
+          <Link href="/blog" data-testid="link-blog">
+            <span
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                location.startsWith("/blog") ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              Blog
+            </span>
+          </Link>
+
           <Link href="/about" data-testid="link-about">
             <span
               className={`text-sm font-medium transition-colors hover:text-primary ${
@@ -216,6 +226,18 @@ export default function Header() {
                 </Link>
               ))}
             </div>
+
+            <Link href="/blog">
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className={`block w-full text-left rounded-md px-3 py-2 text-base font-medium transition-colors hover:bg-accent ${
+                  location.startsWith("/blog") ? "bg-accent text-accent-foreground" : ""
+                }`}
+                data-testid="mobile-link-blog"
+              >
+                Blog
+              </button>
+            </Link>
 
             <Link href="/about">
               <button

@@ -13,6 +13,8 @@ import LactateTestingPage from "@/pages/LactateTestingPage";
 import TriathlonPage from "@/pages/TriathlonPage";
 import CyclingPage from "@/pages/CyclingPage";
 import RunningPage from "@/pages/RunningPage";
+import BlogPage from "@/pages/BlogPage";
+import BlogPostPage from "@/pages/BlogPostPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -24,6 +26,8 @@ function Router() {
       <Route path="/cycling" component={CyclingPage} />
       <Route path="/running" component={RunningPage} />
       <Route path="/about" component={AboutPage} />
+      <Route path="/blog" component={BlogPage} />
+      <Route path="/blog/:slug" component={BlogPostPage} />
       <Route path="/booking" component={BookingPage} />
       <Route path="/contact" component={ContactPage} />
       <Route path="/lactate-testing" component={LactateTestingPage} />
