@@ -11,7 +11,7 @@ import { Link } from "wouter";
 import triathlonImage from "@assets/triathlon-main.jpeg";
 import cyclingImage from "@assets/cycling-main.jpeg";
 import runningImage from "@assets/running-main.jpg";
-import lactateTestingImage from "@assets/gallery-6.jpg";
+import lactateTestingImage from "@assets/EB155832-C85D-4102-A665-24C80F4F9913_4_5005_c_1762950401783.jpeg";
 
 export default function HomePage() {
   const services = [
