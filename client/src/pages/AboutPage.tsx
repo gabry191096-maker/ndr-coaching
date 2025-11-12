@@ -6,7 +6,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Award, Target, Users, TrendingUp } from "lucide-react";
 import { Link } from "wouter";
 import coachImage from "@assets/gabriele-grimaldi.png";
-import coachingImage from "@assets/gallery-1.jpg";
+import coachingImage from "@assets/about-main.jpeg";
+import achievementsImage from "@assets/achievements.jpg";
 
 export default function AboutPage() {
   const achievements = [
@@ -83,7 +84,7 @@ export default function AboutPage() {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className="aspect-video overflow-hidden rounded-lg">
-                  <img src={coachingImage} alt="Gabriele competing in triathlon" className="w-full h-full object-cover" />
+                  <img src={achievementsImage} alt="Gabriele achievements" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <ul className="space-y-4">

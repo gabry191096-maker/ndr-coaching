@@ -7,9 +7,9 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import triathlonImage from "@assets/gallery-4.jpg";
-import cyclingImage from "@assets/gallery-3.jpg";
-import runningImage from "@assets/gallery-5.jpg";
+import triathlonImage from "@assets/triathlon-main.jpeg";
+import cyclingImage from "@assets/cycling-main.jpeg";
+import runningImage from "@assets/running-main.jpg";
 import lactateTestingImage from "@assets/gallery-6.jpg";
 
 export default function HomePage() {

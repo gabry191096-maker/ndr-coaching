@@ -6,9 +6,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle2 } from "lucide-react";
 import { Link } from "wouter";
-import triathlonImage from "@assets/gallery-4.jpg";
-import cyclingImage from "@assets/gallery-3.jpg";
-import runningImage from "@assets/gallery-5.jpg";
+import triathlonImage from "@assets/triathlon-main.jpeg";
+import cyclingImage from "@assets/cycling-main.jpeg";
+import runningImage from "@assets/running-main.jpg";
 import lactateTestingImage from "@assets/gallery-6.jpg";
 
 export default function ServicesPage() {
