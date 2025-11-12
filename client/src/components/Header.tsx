@@ -118,6 +118,17 @@ export default function Header() {
               Contact
             </span>
           </Link>
+
+          <a 
+            href="https://www.ezgains.co.uk/discount/gabrygrim" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            data-testid="link-ezgains"
+          >
+            <span className="text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
+              EZ Gains
+            </span>
+          </a>
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-4">
@@ -229,6 +240,21 @@ export default function Header() {
                 Contact
               </button>
             </Link>
+
+            <a 
+              href="https://www.ezgains.co.uk/discount/gabrygrim" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className="block w-full text-left rounded-md px-3 py-2 text-base font-medium transition-colors hover:bg-accent"
+                data-testid="mobile-link-ezgains"
+              >
+                EZ Gains
+              </button>
+            </a>
+
             <div className="pt-4 space-y-2">
               <div className="flex gap-2 px-3">
                 <Button size="icon" variant="ghost" asChild>
