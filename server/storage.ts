@@ -43,8 +43,7 @@ export class MemStorage implements IStorage {
         <p><strong>Training tip:</strong> Use the 2km perimeter for 5x2km threshold intervals with 90 seconds recovery.</p>
         
         <div class="my-6">
-          <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="127024" data-style="standard"></div>
-          <script src="https://strava-embeds.com/embed.js"></script>
+          <iframe height="405" width="100%" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/routes/127024/embed"></iframe>
         </div>
 
         <h2>2. Thames Path - Battersea to Westminster (6.5km loop)</h2>
@@ -55,7 +54,7 @@ export class MemStorage implements IStorage {
         <p><strong>Popular Strava route:</strong> This is one of the most tracked routes in London. Early morning (6-7am) avoids the heaviest foot traffic.</p>
         
         <div class="my-6">
-          <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="119101" data-style="standard"></div>
+          <iframe height="405" width="100%" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/routes/119101/embed"></iframe>
         </div>
 
         <h2>3. Wandsworth Common Loop (4.3km)</h2>
@@ -66,7 +65,7 @@ export class MemStorage implements IStorage {
         <p><strong>Find on Strava:</strong> Search "Wandsworth Common Loop" - highly popular with local runners.</p>
         
         <div class="my-6">
-          <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="297452" data-style="standard"></div>
+          <iframe height="405" width="100%" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/routes/297452/embed"></iframe>
         </div>
 
         <h2>4. Battersea Park to Wandsworth Common (13.5km)</h2>
@@ -83,7 +82,7 @@ export class MemStorage implements IStorage {
         <p>Run through Battersea Park, Wandsworth, Fulham and Chelsea. This popular loop connects multiple riverside areas and green spaces. Year-round route with excellent facilities.</p>
         
         <div class="my-6">
-          <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="943844" data-style="standard"></div>
+          <iframe height="405" width="100%" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/routes/943844/embed"></iframe>
         </div>
 
         <h2>Popular Strava Route: Clapham-Balham-Tooting-Wandsworth 10K</h2>
