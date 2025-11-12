@@ -79,7 +79,10 @@ export default function Footer() {
           <div>
             <h4 className="font-heading font-semibold mb-4">Contact & Social</h4>
             <div className="space-y-3">
-              <p className="text-sm text-muted-foreground">London, United Kingdom</p>
+              <p className="text-sm text-muted-foreground">
+                Battersea Reach<br/>
+                Battersea, London SW18
+              </p>
               <a href="mailto:gabriele@ndrcoaching.co.uk" className="text-sm text-muted-foreground hover:text-primary transition-colors block">
                 gabriele@ndrcoaching.co.uk
               </a>
