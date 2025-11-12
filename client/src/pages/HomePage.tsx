@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import FeaturesSection from "@/components/FeaturesSection";
 import InstagramGallery from "@/components/InstagramGallery";
+import Sponsors from "@/components/Sponsors";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
@@ -100,6 +101,7 @@ export default function HomePage() {
 
         <FeaturesSection />
         <InstagramGallery />
+        <Sponsors />
 
         <section className="py-16 md:py-20 lg:py-24 bg-primary text-primary-foreground">
           <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
