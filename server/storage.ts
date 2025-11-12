@@ -107,7 +107,7 @@ export class MemStorage implements IStorage {
         <p>Need a personalized training plan that incorporates these routes and prepares you for your goal race? <a href="/booking">Book a free consultation</a> to discuss your goals and get a science-based training program.</p>`,
         author: "Gabriele Grimaldi",
         category: "Running",
-        publishedAt: new Date("2024-11-01"),
+        publishedAt: new Date("2025-11-12"),
         imageUrl: null,
       },
       {
@@ -233,7 +233,7 @@ export class MemStorage implements IStorage {
 <p><a href="/booking">Book a free consultation</a> to discuss your 70.3 goals and create a science-based training plan that gets you to the start line fit and confident.</p>`,
         author: "Gabriele Grimaldi",
         category: "Triathlon",
-        publishedAt: new Date("2024-11-12"),
+        publishedAt: new Date("2025-11-12"),
         imageUrl: null,
       },
     ];
