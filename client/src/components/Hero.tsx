@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import heroImage from "@assets/about-main.jpeg";
+import heroImage from "@assets/46A45CF6-2489-4479-BD42-0973F8E5790C_1_105_c_1762949998386.jpeg";
 
 export default function Hero() {
   return (
