@@ -103,14 +103,14 @@ export default function LactateTestingPage() {
       ]
     },
     package: {
-      price: "£405",
+      price: "£399",
       title: "3-Session Package",
       features: [
         "Three testing sessions",
         "Progress tracking over time",
         "Zone adjustments as fitness improves",
         "Priority booking",
-        "10% savings vs single sessions"
+        "Save £51 vs single sessions"
       ]
     }
   };
@@ -260,7 +260,7 @@ export default function LactateTestingPage() {
                   <CardTitle className="text-2xl">{pricing.package.title}</CardTitle>
                   <p className="text-4xl font-heading font-bold text-primary mt-4">
                     {pricing.package.price}
-                    <span className="text-lg text-muted-foreground font-normal"> (save £27)</span>
+                    <span className="text-lg text-muted-foreground font-normal"> (save £51)</span>
                   </p>
                 </CardHeader>
                 <CardContent>
