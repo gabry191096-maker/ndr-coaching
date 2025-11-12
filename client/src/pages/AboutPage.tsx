@@ -10,10 +10,18 @@ import coachingImage from "@assets/generated_images/Coach_training_session_97e2b
 
 export default function AboutPage() {
   const achievements = [
-    { icon: Users, label: "100+ Athletes Coached", value: "100+" },
-    { icon: Award, label: "Certified Coach", value: "BTF Level 2" },
-    { icon: Target, label: "Years Experience", value: "8+" },
-    { icon: TrendingUp, label: "Success Rate", value: "95%" }
+    { icon: Award, label: "Ironman Serbia 2024", value: "2nd Place" },
+    { icon: Award, label: "Challenge London 2023", value: "2nd Place" },
+    { icon: Target, label: "Years Experience", value: "10+" },
+    { icon: TrendingUp, label: "Professional Athlete", value: "ITU Circuit" }
+  ];
+
+  const competitionResults = [
+    "2nd Place at Ironman Serbia 2024",
+    "2nd Place at Challenge London 2023",
+    "Winner of Cholmondoley Castle Tri 2021 and 2024",
+    "Participation at Elite International races in the ITU circuit",
+    "Various national podiums in Sprint and Olympic Distance events"
   ];
 
   return (
@@ -30,16 +38,16 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
               <div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
-                  Meet Your Coach
+                  About Gabriele
                 </h1>
                 <p className="text-xl text-muted-foreground mb-6">
-                  Hi, I'm Gabriele Grimaldi, founder of NDR Coaching. I'm a British Triathlon Federation certified coach specializing in helping corporate professionals achieve their endurance goals without sacrificing their careers.
+                  I'm Gabriele Grimaldi, a Professional Triathlete and an IT Senior Sales Executive.
                 </p>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Having competed in multiple Ironman events and ultramarathons while maintaining a demanding professional career, I understand the unique challenges faced by time-crunched athletes. My approach combines scientific training principles with real-world flexibility.
+                  Over the past 10 years, I've developed strategies to balance demanding studies, corporate responsibilities, and intense endurance training.
                 </p>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Based in London, I work with professionals across the UK who want to balance peak athletic performance with career success. Whether you're training for your first 5K or your next Ironman, I'm here to guide you every step of the way.
+                  My coaching philosophy is the product of years of trial and error, refining techniques to optimize performance in work, life, and sport.
                 </p>
                 <Link href="/booking">
                   <Button size="lg" data-testid="button-book-consultation">
@@ -71,37 +79,53 @@ export default function AboutPage() {
 
             <div className="mb-20">
               <h2 className="text-3xl md:text-4xl font-heading font-semibold mb-8 text-center">
-                My Coaching Philosophy
+                Competition Achievements
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className="aspect-video overflow-hidden rounded-lg">
-                  <img src={coachingImage} alt="Coaching session" className="w-full h-full object-cover" />
+                  <img src={coachingImage} alt="Gabriele competing in triathlon" className="w-full h-full object-cover" />
                 </div>
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-xl font-heading font-semibold mb-2">Science-Based Training</h3>
-                    <p className="text-muted-foreground">
-                      I use lactate testing, heart rate variability monitoring, and proven periodization methods to optimize your training response and minimize injury risk.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-heading font-semibold mb-2">Flexible & Adaptive</h3>
-                    <p className="text-muted-foreground">
-                      Life happens. Your training plan should adapt to business trips, family commitments, and unexpected challenges—not the other way around.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-heading font-semibold mb-2">Holistic Approach</h3>
-                    <p className="text-muted-foreground">
-                      Training is just one piece. I help you optimize nutrition, recovery, sleep, and stress management for sustainable performance gains.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-heading font-semibold mb-2">Personal Support</h3>
-                    <p className="text-muted-foreground">
-                      You get direct access to me via WhatsApp for questions, adjustments, and motivation. No automated responses or generic templates.
-                    </p>
-                  </div>
+                <div>
+                  <ul className="space-y-4">
+                    {competitionResults.map((result, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <Award className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                        <span className="text-lg">{result}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="mb-20">
+              <h2 className="text-3xl md:text-4xl font-heading font-semibold mb-8 text-center">
+                My Coaching Philosophy
+              </h2>
+              <div className="max-w-3xl mx-auto space-y-6">
+                <div>
+                  <h3 className="text-xl font-heading font-semibold mb-2">Science-Based Training</h3>
+                  <p className="text-muted-foreground">
+                    I use lactate testing, heart rate variability monitoring, and proven periodization methods to optimize your training response and minimize injury risk.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-heading font-semibold mb-2">Flexible & Adaptive</h3>
+                  <p className="text-muted-foreground">
+                    Life happens. Your training plan should adapt to business trips, family commitments, and unexpected challenges—not the other way around.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-heading font-semibold mb-2">Holistic Approach</h3>
+                  <p className="text-muted-foreground">
+                    Training is just one piece. I help you optimize nutrition, recovery, sleep, and stress management for sustainable performance gains.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-heading font-semibold mb-2">Personal Support</h3>
+                  <p className="text-muted-foreground">
+                    You get direct access to me via WhatsApp for questions, adjustments, and motivation. No automated responses or generic templates.
+                  </p>
                 </div>
               </div>
             </div>
