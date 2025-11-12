@@ -41,6 +41,11 @@ export class MemStorage implements IStorage {
         <p><strong>Best for:</strong> Easy runs, warm-ups, interval training, recovery runs</p>
         <p>The park's perimeter is ideal for interval training sessions. The interior paths offer varied terrain with some gentle hills - perfect for building strength while staying close to home. Features include Thames riverside views, ponds, gardens, and public facilities near the bandstand.</p>
         <p><strong>Training tip:</strong> Use the 2km perimeter for 5x2km threshold intervals with 90 seconds recovery.</p>
+        
+        <div class="my-6">
+          <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="127024" data-style="standard"></div>
+          <script src="https://strava-embeds.com/embed.js"></script>
+        </div>
 
         <h2>2. Thames Path - Battersea to Westminster (6.5km loop)</h2>
         <p><strong>Distance:</strong> Varies (6.5km recommended loop)</p>
@@ -48,6 +53,10 @@ export class MemStorage implements IStorage {
         <p><strong>Best for:</strong> Tempo runs, long steady efforts, sightseeing runs</p>
         <p>The Thames Path offers flat, scenic running with iconic views. Start at Battersea Park and head east toward Westminster, crossing back via Albert Bridge. The south bank is more runner-friendly with wider pedestrian paths and fewer diversions. Pass Battersea Power Station, the London Peace Pagoda, and Houses of Parliament.</p>
         <p><strong>Popular Strava route:</strong> This is one of the most tracked routes in London. Early morning (6-7am) avoids the heaviest foot traffic.</p>
+        
+        <div class="my-6">
+          <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="119101" data-style="standard"></div>
+        </div>
 
         <h2>3. Wandsworth Common Loop (4.3km)</h2>
         <p><strong>Distance:</strong> 4.3km (2.7 miles)</p>
@@ -55,6 +64,10 @@ export class MemStorage implements IStorage {
         <p><strong>Best for:</strong> Recovery runs, easy-paced runs, beginner-friendly</p>
         <p>This quiet common provides a peaceful escape from busy streets. The soft paths are easier on your joints, making it excellent for recovery runs or building base mileage. The relatively flat circular route around the common is perfect for consistent pacing.</p>
         <p><strong>Find on Strava:</strong> Search "Wandsworth Common Loop" - highly popular with local runners.</p>
+        
+        <div class="my-6">
+          <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="297452" data-style="standard"></div>
+        </div>
 
         <h2>4. Battersea Park to Wandsworth Common (13.5km)</h2>
         <p><strong>Distance:</strong> 13.5km (8.4 miles)</p>
@@ -63,11 +76,15 @@ export class MemStorage implements IStorage {
         <p>Connect multiple green spaces across Wandsworth Borough. This route cuts through Battersea Park, then Wandsworth Common, offering a mix of park paths and neighborhood trails. Perfect for building endurance while staying off busy roads.</p>
         <p><strong>Training tip:</strong> Ideal for Sunday long runs during marathon build-up phases.</p>
 
-        <h2>5. Putney Bridge & Wandsworth Bridge Circular (5.8-10.6km)</h2>
-        <p><strong>Distance:</strong> 5.8-10.6km (depending on extension)</p>
-        <p><strong>Time:</strong> 40 minutes to 1 hour 15 minutes</p>
-        <p><strong>Best for:</strong> Thames-side loops, varied distance options</p>
-        <p>Run through Wandsworth Park, along the Thames, across bridges, and through Hurlingham Park. Year-round route with excellent facilities. Dog-friendly (on leads).</p>
+        <h2>5. 10K Loop - Battersea Park, Wandsworth, Fulham, Chelsea (10km)</h2>
+        <p><strong>Distance:</strong> 10km (6.2 miles)</p>
+        <p><strong>Time:</strong> 45 minutes to 1 hour</p>
+        <p><strong>Best for:</strong> 10k race pace training, Thames-side loops, varied distance options</p>
+        <p>Run through Battersea Park, Wandsworth, Fulham and Chelsea. This popular loop connects multiple riverside areas and green spaces. Year-round route with excellent facilities.</p>
+        
+        <div class="my-6">
+          <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="943844" data-style="standard"></div>
+        </div>
 
         <h2>Popular Strava Route: Clapham-Balham-Tooting-Wandsworth 10K</h2>
         <p><strong>Distance:</strong> 10km (6 miles)</p>
