@@ -7,7 +7,7 @@ import { Award, Target, Users, TrendingUp } from "lucide-react";
 import { Link } from "wouter";
 import coachImage from "@assets/gabriele-grimaldi.png";
 import coachingImage from "@assets/about-main.jpeg";
-import achievementsImage from "@assets/achievements.jpg";
+import achievementsImage from "@assets/4B5B17DE-7E18-4CE4-8CB4-7B3D579377EC_4_5005_c_1762950420755.jpeg";
 
 export default function AboutPage() {
   const achievements = [
