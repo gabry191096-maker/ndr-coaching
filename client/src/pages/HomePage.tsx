@@ -24,9 +24,8 @@ export default function HomePage() {
         "Transition optimization",
         "6-12 hours per week commitment"
       ],
-      priceRange: "£149/month",
       image: triathlonImage,
-      href: "/services#triathlon"
+      href: "/triathlon"
     },
     {
       title: "Cycling Coaching",
@@ -37,9 +36,8 @@ export default function HomePage() {
         "Nutrition and pacing strategies",
         "Group ride preparation"
       ],
-      priceRange: "£119/month",
       image: cyclingImage,
-      href: "/services#cycling"
+      href: "/cycling"
     },
     {
       title: "Running Coaching",
@@ -50,9 +48,8 @@ export default function HomePage() {
         "Injury prevention protocols",
         "Race day execution plans"
       ],
-      priceRange: "£119/month",
       image: runningImage,
-      href: "/services#running"
+      href: "/running"
     },
     {
       title: "Lactate Testing",
@@ -63,7 +60,6 @@ export default function HomePage() {
         "Performance tracking over time",
         "Data-driven training optimization"
       ],
-      priceRange: "£150/session",
       image: lactateTestingImage,
       href: "/lactate-testing"
     }

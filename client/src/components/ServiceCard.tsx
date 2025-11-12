@@ -7,12 +7,11 @@ interface ServiceCardProps {
   title: string;
   description: string;
   benefits: string[];
-  priceRange: string;
   image: string;
   href: string;
 }
 
-export default function ServiceCard({ title, description, benefits, priceRange, image, href }: ServiceCardProps) {
+export default function ServiceCard({ title, description, benefits, image, href }: ServiceCardProps) {
   return (
     <Card className="overflow-hidden hover-elevate transition-all duration-300 h-full flex flex-col">
       <div className="aspect-video overflow-hidden">
@@ -36,23 +35,17 @@ export default function ServiceCard({ title, description, benefits, priceRange, 
           ))}
         </ul>
       </CardContent>
-      <CardFooter className="flex flex-col gap-3 pt-6">
-        <div className="w-full">
-          <p className="text-sm text-muted-foreground">Starting from</p>
-          <p className="text-2xl font-heading font-bold text-primary">{priceRange}</p>
-        </div>
-        <div className="flex gap-2 w-full">
-          <Link href={href} className="flex-1">
-            <Button variant="outline" className="w-full" data-testid={`button-learn-${title.toLowerCase().replace(/\s/g, '-')}`}>
-              Learn More
-            </Button>
-          </Link>
-          <Link href="/booking" className="flex-1">
-            <Button className="w-full" data-testid={`button-book-${title.toLowerCase().replace(/\s/g, '-')}`}>
-              Book Now
-            </Button>
-          </Link>
-        </div>
+      <CardFooter className="flex gap-2 w-full pt-6">
+        <Link href={href} className="flex-1">
+          <Button variant="outline" className="w-full" data-testid={`button-learn-${title.toLowerCase().replace(/\s/g, '-')}`}>
+            Learn More
+          </Button>
+        </Link>
+        <Link href="/booking" className="flex-1">
+          <Button className="w-full" data-testid={`button-book-${title.toLowerCase().replace(/\s/g, '-')}`}>
+            Book Now
+          </Button>
+        </Link>
       </CardFooter>
     </Card>
   );
