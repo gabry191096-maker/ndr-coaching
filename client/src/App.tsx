@@ -15,6 +15,7 @@ import CyclingPage from "@/pages/CyclingPage";
 import RunningPage from "@/pages/RunningPage";
 import BlogPage from "@/pages/BlogPage";
 import BlogPostPage from "@/pages/BlogPostPage";
+import PacingCalculatorPage from "@/pages/PacingCalculatorPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -30,6 +31,7 @@ function Router() {
       <Route path="/blog/:slug" component={BlogPostPage} />
       <Route path="/booking" component={BookingPage} />
       <Route path="/contact" component={ContactPage} />
+      <Route path="/pacing-calculator" component={PacingCalculatorPage} />
       <Route path="/lactate-testing" component={LactateTestingPage} />
       <Route component={NotFound} />
     </Switch>

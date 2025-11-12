@@ -115,7 +115,7 @@ export default function BlogPostPage() {
             )}
 
             <div 
-              className="prose prose-lg max-w-none dark:prose-invert"
+              className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-foreground prose-li:text-foreground prose-strong:text-primary prose-a:text-primary hover:prose-a:text-primary/80"
               dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.content) }}
               data-testid="text-post-content"
             />

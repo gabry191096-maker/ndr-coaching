@@ -1,0 +1,45 @@
+If you know your running and cycling LT1 and LT2, you can use these values to estimate optimal race paces for different triathlon distances. Generally, the longer the event, the closer your pace will be to LT1; shorter, higher-intensity races approach LT2 or your functional threshold pace.​
+
+Definitions of LT1 and LT2
+LT1 (Aerobic threshold): The intensity at which blood lactate just begins to rise above baseline, correlating to marathon pace or Ironman/70.3 pace for most athletes.​
+
+LT2 (Anaerobic threshold): The intensity at which lactate rapidly accumulates, roughly corresponding to your 10k pace or sprint/standard (Olympic) triathlon pace.​
+
+Race Pace Estimates by Distance
+Running Pace
+Sprint (5k-7.5k run): Aim for LT2 pace (your 10k race effort, sustainable for 30-40 min).​
+
+Standard/Olympic (10k run): Slightly below LT2, about 95–98% of LT2 pace (close to your 10k best).​
+
+70.3/Half Ironman (21.1k run): Near LT1 pace (half marathon pace), roughly 92–95% of LT2.​
+
+Full Ironman (42.2k run): LT1 or even slightly below, about marathon pace, typically 88–90% of LT2.​
+
+Cycling Pace
+Sprint (20k bike): If well-trained, approach LT2 power/pace (95–100% of FTP), but most will sustain 90-95% of FTP unless elite.​
+
+Standard/Olympic (40k bike): Target 85–95% of FTP power (near LT2), adjust lower for age groupers or less experience.​
+
+70.3/Half Ironman (90k bike): 72–85% of FTP (close to LT1), with top age-groupers able to push near LT1.​
+
+Full Ironman (180k bike): 60–75% of FTP (typically below but close to LT1), especially for less trained or on tough courses.​
+
+Practical Ranges Table
+Event	Run Pace Target	Bike Power Target
+Sprint	LT2 (10k race pace)​	93–100% of FTP/LT2​
+Standard/Olympic	~95–98% LT2​	85–95% of FTP​
+70.3	LT1 (Half marathon pace)​	72–85% of FTP/LT1​
+Ironman	LT1 (Marathon pace)​	60–75% of FTP/LT1​
+FTP = Functional Threshold Pace/Power (your LT2 pace/power)
+
+Percentages are relative to threshold values
+
+Personalization Notes
+Well-trained athletes can push closer to LT1/LT2 relative to their fitness; less experienced or fatigued athletes may need to stay further below threshold, especially over Ironman or hot/hilly courses.​
+
+How to Use This
+For race planning, determine your current LT1 and LT2 paces or powers using field tests or lab assessments.
+
+Calculate percent of threshold for target race (as above), then project actual race paces.
+
+This approach helps optimize both performance and fatigue resistance, reducing risk of dropping off pace in later stages.​

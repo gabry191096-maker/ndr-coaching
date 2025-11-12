@@ -129,6 +129,16 @@ export default function Header() {
             </span>
           </Link>
 
+          <Link href="/pacing-calculator" data-testid="link-pacing-calculator">
+            <span
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                location === "/pacing-calculator" ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              Pacing Calculator
+            </span>
+          </Link>
+
           <a 
             href="https://www.ezgains.co.uk/discount/gabrygrim" 
             target="_blank" 
@@ -260,6 +270,18 @@ export default function Header() {
                 data-testid="mobile-link-contact"
               >
                 Contact
+              </button>
+            </Link>
+
+            <Link href="/pacing-calculator">
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className={`block w-full text-left rounded-md px-3 py-2 text-base font-medium transition-colors hover:bg-accent ${
+                  location === "/pacing-calculator" ? "bg-accent text-accent-foreground" : ""
+                }`}
+                data-testid="mobile-link-pacing-calculator"
+              >
+                Pacing Calculator
               </button>
             </Link>
 
