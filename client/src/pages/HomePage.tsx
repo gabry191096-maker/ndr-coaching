@@ -10,6 +10,7 @@ import { Link } from "wouter";
 import triathlonImage from "@assets/generated_images/Triathlon_training_image_33627335.png";
 import cyclingImage from "@assets/generated_images/Cyclist_service_image_d615bd7f.png";
 import runningImage from "@assets/generated_images/Runner_service_image_56b22b8f.png";
+import lactateTestingImage from "@assets/generated_images/Lactate_testing_service_image_4bce5f93.png";
 
 export default function HomePage() {
   const services = [
@@ -51,6 +52,19 @@ export default function HomePage() {
       priceRange: "£119/month",
       image: runningImage,
       href: "/services#running"
+    },
+    {
+      title: "Lactate Testing",
+      description: "Scientific performance testing to optimize your training zones",
+      benefits: [
+        "Accurate lactate threshold determination",
+        "Personalized heart rate & power zones",
+        "Performance tracking over time",
+        "Data-driven training optimization"
+      ],
+      priceRange: "£99/session",
+      image: lactateTestingImage,
+      href: "/services#lactate-testing"
     }
   ];
 
@@ -76,7 +90,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => (
                 <ServiceCard key={index} {...service} />
               ))}

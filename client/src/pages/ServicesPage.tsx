@@ -9,6 +9,7 @@ import { Link } from "wouter";
 import triathlonImage from "@assets/generated_images/Triathlon_training_image_33627335.png";
 import cyclingImage from "@assets/generated_images/Cyclist_service_image_d615bd7f.png";
 import runningImage from "@assets/generated_images/Runner_service_image_56b22b8f.png";
+import lactateTestingImage from "@assets/generated_images/Lactate_testing_service_image_4bce5f93.png";
 
 export default function ServicesPage() {
   const faqs = [
@@ -137,6 +138,34 @@ export default function ServicesPage() {
                       <Button size="lg" data-testid="button-book-running">Book Consultation</Button>
                     </Link>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="lactate-testing" className="mb-20">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="order-2 lg:order-1">
+                  <h2 className="text-3xl md:text-4xl font-heading font-semibold mb-4">Lactate Testing</h2>
+                  <p className="text-lg text-muted-foreground mb-6">
+                    Accurate scientific testing to determine your lactate threshold and optimize your training zones. Essential for data-driven performance improvements.
+                  </p>
+                  <ul className="space-y-3 mb-6">
+                    {["Professional lactate threshold testing", "Precise heart rate zone determination", "Power zone calculation for cycling", "Comprehensive performance report", "Training zone recommendations", "Progress tracking over time"].map((item, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-3xl font-heading font-bold text-primary mb-6">£99<span className="text-lg text-muted-foreground font-normal">/session</span></p>
+                  <div className="flex gap-4">
+                    <Link href="/booking">
+                      <Button size="lg" data-testid="button-book-lactate">Book Session</Button>
+                    </Link>
+                  </div>
+                </div>
+                <div className="aspect-video overflow-hidden rounded-lg order-1 lg:order-2">
+                  <img src={lactateTestingImage} alt="Lactate Testing" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>
