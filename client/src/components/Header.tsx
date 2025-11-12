@@ -10,6 +10,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Menu, X, Instagram, Linkedin, Youtube, ChevronDown } from "lucide-react";
+import logo from "@assets/ndr-logo.png";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -30,7 +31,7 @@ export default function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 p-4 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" data-testid="link-home">
-            <span className="text-2xl font-heading font-bold text-primary">NDR Coaching</span>
+            <img src={logo} alt="NDR Coaching" className="h-10 w-auto" />
           </Link>
         </div>
 

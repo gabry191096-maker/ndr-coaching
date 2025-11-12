@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Target, Users, TrendingUp } from "lucide-react";
 import { Link } from "wouter";
-import coachImage from "@assets/generated_images/Coach_professional_headshot_0fd4588e.png";
-import coachingImage from "@assets/generated_images/Coach_training_session_97e2b432.png";
+import coachImage from "@assets/gabriele-grimaldi.png";
+import coachingImage from "@assets/gallery-1.jpg";
 
 export default function AboutPage() {
   const achievements = [

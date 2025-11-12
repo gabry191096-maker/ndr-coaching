@@ -1,13 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Instagram } from "lucide-react";
+import gallery1 from "@assets/gallery-1.jpg";
+import gallery2 from "@assets/gallery-2.jpg";
+import gallery3 from "@assets/gallery-3.jpg";
+import gallery4 from "@assets/gallery-4.jpg";
+import gallery5 from "@assets/gallery-5.jpg";
+import gallery6 from "@assets/gallery-6.jpg";
 
 const galleryImages = [
-  "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=400&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=400&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1541625602330-2277a4c46182?w=400&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1483721310020-03333e577078?w=400&h=400&fit=crop",
+  gallery1,
+  gallery2,
+  gallery3,
+  gallery4,
+  gallery5,
+  gallery6,
 ];
 
 export default function InstagramGallery() {

@@ -6,10 +6,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle2 } from "lucide-react";
 import { Link } from "wouter";
-import triathlonImage from "@assets/generated_images/Triathlon_training_image_33627335.png";
-import cyclingImage from "@assets/generated_images/Cyclist_service_image_d615bd7f.png";
-import runningImage from "@assets/generated_images/Runner_service_image_56b22b8f.png";
-import lactateTestingImage from "@assets/generated_images/Lactate_testing_service_image_4bce5f93.png";
+import triathlonImage from "@assets/gallery-4.jpg";
+import cyclingImage from "@assets/gallery-3.jpg";
+import runningImage from "@assets/gallery-5.jpg";
+import lactateTestingImage from "@assets/gallery-6.jpg";
 
 export default function ServicesPage() {
   const faqs = [
