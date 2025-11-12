@@ -113,6 +113,21 @@ export default function Footer() {
                 </a>
               </div>
             </div>
+
+            <h4 className="font-heading font-semibold mb-4 mt-6">Shop</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a 
+                  href="https://www.ezgains.co.uk/discount/gabrygrim" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  data-testid="footer-link-ezgains"
+                >
+                  EZ Gains Store
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 

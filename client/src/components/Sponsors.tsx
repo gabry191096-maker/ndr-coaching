@@ -10,11 +10,11 @@ export default function Sponsors() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const sponsors = [
-    { name: "The Feed", logo: theFeedLogo },
-    { name: "EZ Gains", logo: ezGainsLogo },
-    { name: "Active Westminster", logo: activeWestminsterLogo },
-    { name: "Everyone Active", logo: everyoneActiveLogo },
-    { name: "Enable", logo: enableLogo }
+    { name: "The Feed", logo: theFeedLogo, url: "https://thefeed.com/" },
+    { name: "EZ Gains", logo: ezGainsLogo, url: "https://www.ezgains.co.uk/discount/gabrygrim" },
+    { name: "Active Westminster", logo: activeWestminsterLogo, url: "https://active.westminster.gov.uk/leisure-centres/" },
+    { name: "Everyone Active", logo: everyoneActiveLogo, url: "https://www.everyoneactive.com/" },
+    { name: "Enable", logo: enableLogo, url: "https://enablelc.org" }
   ];
 
   useEffect(() => {
@@ -53,8 +53,11 @@ export default function Sponsors() {
         <div className="bg-white rounded-xl p-12 shadow-lg">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 items-center justify-items-center">
             {sponsors.map((sponsor, index) => (
-              <div 
-                key={index} 
+              <a
+                key={index}
+                href={sponsor.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`flex items-center justify-center w-full transition-all duration-700 ease-out ${
                   isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
                 }`}
@@ -66,7 +69,7 @@ export default function Sponsors() {
                   alt={sponsor.name} 
                   className="max-h-32 w-auto object-contain hover:scale-110 transition-transform duration-300"
                 />
-              </div>
+              </a>
             ))}
           </div>
         </div>
