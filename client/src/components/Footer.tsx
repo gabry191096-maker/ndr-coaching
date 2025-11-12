@@ -48,23 +48,26 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-heading font-semibold mb-4">Services</h4>
+            <h4 className="font-heading font-semibold mb-4">Coaching</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/services#triathlon">
-                  <span className="text-muted-foreground hover:text-primary transition-colors">Triathlon Coaching</span>
+                  <span className="text-muted-foreground hover:text-primary transition-colors">Triathlon</span>
                 </Link>
               </li>
               <li>
                 <Link href="/services#cycling">
-                  <span className="text-muted-foreground hover:text-primary transition-colors">Cycling Coaching</span>
+                  <span className="text-muted-foreground hover:text-primary transition-colors">Cycling</span>
                 </Link>
               </li>
               <li>
                 <Link href="/services#running">
-                  <span className="text-muted-foreground hover:text-primary transition-colors">Running Coaching</span>
+                  <span className="text-muted-foreground hover:text-primary transition-colors">Running</span>
                 </Link>
               </li>
+            </ul>
+            <h4 className="font-heading font-semibold mb-4 mt-6">Testing</h4>
+            <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/lactate-testing">
                   <span className="text-muted-foreground hover:text-primary transition-colors">Lactate Testing</span>

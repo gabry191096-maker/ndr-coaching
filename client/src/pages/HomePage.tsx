@@ -62,7 +62,7 @@ export default function HomePage() {
         "Performance tracking over time",
         "Data-driven training optimization"
       ],
-      priceRange: "£99/session",
+      priceRange: "£150/session",
       image: lactateTestingImage,
       href: "/lactate-testing"
     }

@@ -92,25 +92,25 @@ export default function LactateTestingPage() {
 
   const pricing = {
     single: {
-      price: "£99",
+      price: "£150",
       title: "Single Session",
       features: [
         "60-90 minute testing session",
         "Professional lactate analysis",
         "Detailed performance report",
-        "Personalized training zones",
+        "Personalized training zones (running or cycling)",
         "Zone application guidance"
       ]
     },
     package: {
-      price: "£270",
+      price: "£405",
       title: "3-Session Package",
       features: [
         "Three testing sessions",
         "Progress tracking over time",
         "Zone adjustments as fitness improves",
         "Priority booking",
-        "15% savings vs single sessions"
+        "10% savings vs single sessions"
       ]
     }
   };
@@ -119,7 +119,7 @@ export default function LactateTestingPage() {
     <div className="min-h-screen flex flex-col">
       <SEO
         title="Lactate Threshold Testing London - Performance Testing for Athletes"
-        description="Professional lactate threshold testing in London for cyclists, runners, and triathletes. Accurate training zones, heart rate testing, and performance optimization. £99 per session."
+        description="Professional lactate threshold testing in London for cyclists, runners, and triathletes. Accurate training zones, heart rate testing, and performance optimization. £150 per session."
         keywords="lactate testing London, lactate threshold test, performance testing London, VO2 max testing, heart rate zones, cycling performance test, running performance test, sports science testing London"
       />
       <Header />
@@ -140,7 +140,7 @@ export default function LactateTestingPage() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/booking">
                     <Button size="lg" data-testid="button-book-lactate-hero">
-                      Book Your Test - £99
+                      Book Your Test - £150
                     </Button>
                   </Link>
                   <Link href="/contact">
@@ -313,7 +313,7 @@ export default function LactateTestingPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/booking">
                 <Button size="lg" data-testid="button-cta-book">
-                  Book Your Test - £99
+                  Book Your Test - £150
                 </Button>
               </Link>
               <Link href="/contact">
