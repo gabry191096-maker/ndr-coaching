@@ -66,7 +66,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/services#lactate-testing">
+                <Link href="/lactate-testing">
                   <span className="text-muted-foreground hover:text-primary transition-colors">Lactate Testing</span>
                 </Link>
               </li>

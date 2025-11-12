@@ -64,7 +64,7 @@ export default function HomePage() {
       ],
       priceRange: "£99/session",
       image: lactateTestingImage,
-      href: "/services#lactate-testing"
+      href: "/lactate-testing"
     }
   ];
 
