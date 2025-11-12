@@ -35,12 +35,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
     
     if (username === adminUsername && password === adminPassword) {
-      // Successful login - clear attempts and set session
+      // Successful login - clear attempts and regenerate session to prevent fixation
       loginAttempts.delete(clientIp);
-      req.session.isAdmin = true;
-      req.session.userId = "admin";
       
-      return res.json({ message: "Login successful" });
+      // Regenerate session to prevent session fixation attacks
+      req.session.regenerate((err) => {
+        if (err) {
+          return res.status(500).json({ message: "Login failed. Please try again." });
+        }
+        
+        req.session.isAdmin = true;
+        req.session.userId = "admin";
+        
+        req.session.save((err) => {
+          if (err) {
+            return res.status(500).json({ message: "Login failed. Please try again." });
+          }
+          res.json({ message: "Login successful" });
+        });
+      });
+      return;
     }
     
     // Failed login - increment attempts
