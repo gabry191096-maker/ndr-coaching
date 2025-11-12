@@ -12,7 +12,8 @@ import { Calculator, Bike, PersonStanding } from "lucide-react";
 type RaceDistance = "sprint" | "standard" | "70.3" | "ironman";
 
 interface PaceResult {
-  targetPace: string;
+  minPace: string;
+  maxPace: string;
   percentOfLT2: string;
   description: string;
 }
@@ -60,40 +61,51 @@ export default function PacingCalculatorPage() {
     
     if (!lt1Seconds || !lt2Seconds) return null;
 
-    let targetSeconds: number;
-    let percentOfLT2: number;
+    let minSeconds: number;
+    let maxSeconds: number;
+    let minPercent: number;
+    let maxPercent: number;
     let description: string;
 
     switch (runningRaceDistance) {
       case "sprint":
-        // LT2 pace (10k race effort)
-        targetSeconds = lt2Seconds;
-        percentOfLT2 = 100;
-        description = "Sprint distance: Run at your LT2 pace (10k race effort). This is sustainable for 30-40 minutes.";
+        // 98-100% of LT2 (10k race effort)
+        minPercent = 98;
+        maxPercent = 100;
+        minSeconds = lt2Seconds * (100 / minPercent);
+        maxSeconds = lt2Seconds;
+        description = "Sprint distance: Run at 98-100% of your LT2 pace (10k race effort). Elite athletes can sustain 100%, most target 98-99%.";
         break;
       case "standard":
         // 95-98% of LT2
-        targetSeconds = lt2Seconds * 1.02; // Slightly slower than LT2
-        percentOfLT2 = 98;
-        description = "Olympic distance: Run slightly below LT2, about 95-98% of your LT2 pace (close to 10k best).";
+        minPercent = 95;
+        maxPercent = 98;
+        minSeconds = lt2Seconds * (100 / minPercent);
+        maxSeconds = lt2Seconds * (100 / maxPercent);
+        description = "Olympic distance: Run at 95-98% of LT2 (slightly slower than 10k pace). Less experienced athletes should target the lower range.";
         break;
       case "70.3":
-        // LT1 pace
-        targetSeconds = lt1Seconds;
-        percentOfLT2 = 90;
-        description = "Half Ironman: Run at your LT1 pace (aerobic threshold), sustainable for the entire half marathon after the bike leg.";
+        // 98-102% of LT1 (slightly faster to slightly slower than LT1)
+        minPercent = 90;
+        maxPercent = 92;
+        minSeconds = lt1Seconds * 0.98;
+        maxSeconds = lt1Seconds * 1.02;
+        description = "Half Ironman: Run at your LT1 pace range (aerobic threshold, 90-92% of LT2). Target the faster end if well-trained, slower end for tougher courses.";
         break;
       case "ironman":
-        // LT1 or slightly below
-        targetSeconds = lt1Seconds * 1.03; // Slightly slower than LT1
-        percentOfLT2 = 88;
-        description = "Full Ironman: Run at or below LT1 (marathon pace), typically 88-90% of LT2.";
+        // 100-105% of LT1 (at or slower than LT1)
+        minPercent = 88;
+        maxPercent = 90;
+        minSeconds = lt1Seconds;
+        maxSeconds = lt1Seconds * 1.05;
+        description = "Full Ironman: Run at or below LT1 (marathon pace, 88-90% of LT2). Start conservative and adjust based on how you feel after the bike leg.";
         break;
     }
 
     return {
-      targetPace: formatTime(targetSeconds),
-      percentOfLT2: `${percentOfLT2}%`,
+      minPace: formatTime(minSeconds),
+      maxPace: formatTime(maxSeconds),
+      percentOfLT2: `${minPercent}-${maxPercent}%`,
       description
     };
   };
@@ -262,11 +274,11 @@ export default function PacingCalculatorPage() {
 
                     {runningResult && (
                       <div className="mt-8 p-6 bg-primary/10 rounded-lg border border-primary/20">
-                        <h3 className="text-xl font-semibold mb-4 text-primary">Target Race Pace</h3>
+                        <h3 className="text-xl font-semibold mb-4 text-primary">Target Race Pace Range</h3>
                         <div className="space-y-3">
                           <div className="flex items-baseline gap-2">
                             <span className="text-4xl font-bold text-primary" data-testid="text-target-pace">
-                              {runningResult.targetPace}
+                              {runningResult.minPace} - {runningResult.maxPace}
                             </span>
                             <span className="text-lg text-muted-foreground">per {unit === "km" ? "km" : "mile"}</span>
                           </div>
