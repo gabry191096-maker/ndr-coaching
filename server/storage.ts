@@ -1,4 +1,4 @@
-import { type User, type InsertUser, type BlogPost, type InsertBlogPost } from "@shared/schema";
+import { type User, type InsertUser, type BlogPost, type InsertBlogPost, type EmailSubscriber, type InsertEmailSubscriber } from "@shared/schema";
 import { randomUUID } from "crypto";
 
 // modify the interface with any CRUD methods
@@ -12,15 +12,20 @@ export interface IStorage {
   getAllBlogPosts(): Promise<BlogPost[]>;
   getBlogPostBySlug(slug: string): Promise<BlogPost | undefined>;
   createBlogPost(post: InsertBlogPost): Promise<BlogPost>;
+  
+  createEmailSubscriber(subscriber: InsertEmailSubscriber): Promise<EmailSubscriber>;
+  getEmailSubscriberByEmail(email: string): Promise<EmailSubscriber | undefined>;
 }
 
 export class MemStorage implements IStorage {
   private users: Map<string, User>;
   private blogPosts: Map<string, BlogPost>;
+  private emailSubscribers: Map<string, EmailSubscriber>;
 
   constructor() {
     this.users = new Map();
     this.blogPosts = new Map();
+    this.emailSubscribers = new Map();
     
     // Add sample blog posts
     this.seedBlogPosts();
@@ -313,6 +318,22 @@ export class MemStorage implements IStorage {
     };
     this.blogPosts.set(id, post);
     return post;
+  }
+
+  async createEmailSubscriber(insertSubscriber: InsertEmailSubscriber): Promise<EmailSubscriber> {
+    const id = randomUUID();
+    const subscriber: EmailSubscriber = {
+      ...insertSubscriber,
+      id,
+      subscribedAt: new Date(),
+      discountClaimed: insertSubscriber.discountClaimed ?? "15OFF"
+    };
+    this.emailSubscribers.set(subscriber.email, subscriber);
+    return subscriber;
+  }
+
+  async getEmailSubscriberByEmail(email: string): Promise<EmailSubscriber | undefined> {
+    return this.emailSubscribers.get(email);
   }
 }
 

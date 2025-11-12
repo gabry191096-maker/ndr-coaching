@@ -4,6 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import ScrollToTop from "@/components/ScrollToTop";
+import LeadGeneratorPopup from "@/components/LeadGeneratorPopup";
 import HomePage from "@/pages/HomePage";
 import ServicesPage from "@/pages/ServicesPage";
 import AboutPage from "@/pages/AboutPage";
@@ -44,6 +45,7 @@ function App() {
       <TooltipProvider>
         <ScrollToTop />
         <Toaster />
+        <LeadGeneratorPopup />
         <Router />
       </TooltipProvider>
     </QueryClientProvider>
