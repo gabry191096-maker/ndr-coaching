@@ -1,16 +1,36 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useMutation } from "@tanstack/react-query";
+import { useLocation } from "wouter";
+import { apiRequest } from "@/lib/queryClient";
+import ProtectedRoute from "@/components/ProtectedRoute";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Download, Mail, Calendar, Gift } from "lucide-react";
+import { Download, Mail, Calendar, Gift, LogOut } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 import { type EmailSubscriber } from "@shared/schema";
 
-export default function AdminSubscribersPage() {
+function AdminSubscribersContent() {
+  const [, setLocation] = useLocation();
+  const { toast } = useToast();
+  
   const { data: subscribers, isLoading } = useQuery<EmailSubscriber[]>({
     queryKey: ["/api/subscribers"],
+  });
+
+  const logoutMutation = useMutation({
+    mutationFn: async () => {
+      return await apiRequest("POST", "/api/auth/logout");
+    },
+    onSuccess: () => {
+      toast({
+        title: "Logged Out",
+        description: "You have been logged out successfully.",
+      });
+      setLocation("/admin/login");
+    },
   });
 
   const exportToCSV = () => {
@@ -53,7 +73,7 @@ export default function AdminSubscribersPage() {
         <section className="py-16 md:py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-4xl">
-              <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center justify-between mb-8 gap-4">
                 <div>
                   <h1 className="text-4xl font-bold tracking-tight sm:text-5xl" data-testid="text-admin-title">
                     Email Subscribers
@@ -62,16 +82,27 @@ export default function AdminSubscribersPage() {
                     {isLoading ? "Loading..." : `${subscribers?.length || 0} total subscribers`}
                   </p>
                 </div>
-                {subscribers && subscribers.length > 0 && (
-                  <Button 
-                    onClick={exportToCSV}
-                    data-testid="button-export-csv"
+                <div className="flex items-center gap-2">
+                  {subscribers && subscribers.length > 0 && (
+                    <Button 
+                      onClick={exportToCSV}
+                      data-testid="button-export-csv"
+                      className="gap-2"
+                    >
+                      <Download className="h-4 w-4" />
+                      Export CSV
+                    </Button>
+                  )}
+                  <Button
+                    variant="outline"
+                    onClick={() => logoutMutation.mutate()}
+                    data-testid="button-logout"
                     className="gap-2"
                   >
-                    <Download className="h-4 w-4" />
-                    Export CSV
+                    <LogOut className="h-4 w-4" />
+                    Logout
                   </Button>
-                )}
+                </div>
               </div>
 
               {isLoading ? (
@@ -143,5 +174,13 @@ export default function AdminSubscribersPage() {
       </main>
       <Footer />
     </div>
+  );
+}
+
+export default function AdminSubscribersPage() {
+  return (
+    <ProtectedRoute>
+      <AdminSubscribersContent />
+    </ProtectedRoute>
   );
 }
